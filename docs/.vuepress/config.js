@@ -59,7 +59,7 @@ module.exports = {
           },
           {
             text: "ES6入门教程",
-            link: "/books/ES6入门教程/ES6/",
+            link: "/books/ES6入门教程/ES6与JavaScript/",
           },
         ],
       },
@@ -87,7 +87,112 @@ module.exports = {
           title: "ES6入门教程",
           collapsable: true, // 是否折叠
           sidebarDepth: 4, // 缩放子级别名称
-          children: [{ title: "ES6", path: "/books/ES6入门教程/ES6" }],
+          children: [
+            {
+              title: "ES6与JavaScript",
+              path: "/books/ES6入门教程/ES6与JavaScript",
+            },
+            {
+              title: "let和const命令",
+              path: "/books/ES6入门教程/let和const命令",
+            },
+            {
+              title: "变量的解构赋值",
+              path: "/books/ES6入门教程/变量的解构赋值",
+            },
+            {
+              title: "字符串的扩展",
+              path: "/books/ES6入门教程/字符串的扩展",
+            },
+            {
+              title: "字符串的新增方法",
+              path: "/books/ES6入门教程/字符串的新增方法",
+            },
+            {
+              title: "正则的扩展",
+              path: "/books/ES6入门教程/正则的扩展",
+            },
+            {
+              title: "数值的扩展",
+              path: "/books/ES6入门教程/数值的扩展",
+            },
+            {
+              title: "函数的扩展",
+              path: "/books/ES6入门教程/函数的扩展",
+            },
+            {
+              title: "数组的扩展",
+              path: "/books/ES6入门教程/数组的扩展",
+            },
+            {
+              title: "对象的扩展",
+              path: "/books/ES6入门教程/对象的扩展",
+            },
+            {
+              title: "对象的新增方法",
+              path: "/books/ES6入门教程/对象的新增方法",
+            },
+            {
+              title: "Symbol",
+              path: "/books/ES6入门教程/Symbol",
+            },
+            {
+              title: "Set和Map数据结构",
+              path: "/books/ES6入门教程/Set和Map数据结构",
+            },
+            {
+              title: "Proxy",
+              path: "/books/ES6入门教程/Proxy",
+            },
+            {
+              title: "Promise对象",
+              path: "/books/ES6入门教程/Promise对象",
+            },
+            {
+              title: "Iterator和for...of循环",
+              path: "/books/ES6入门教程/Iterator和for...of循环",
+            },
+            {
+              title: "Generator函数的语法和异步调用",
+              path: "/books/ES6入门教程/Generator函数的语法和异步调用",
+            },
+            {
+              title: "async函数",
+              path: "/books/ES6入门教程/async函数",
+            },
+            {
+              title: "Class的基本语法和继承",
+              path: "/books/ES6入门教程/Class的基本语法和继承",
+            },
+            {
+              title: "Module的语法和加载实现",
+              path: "/books/ES6入门教程/Module的语法和加载实现",
+            },
+            {
+              title: "编程风格",
+              path: "/books/ES6入门教程/编程风格",
+            },
+            {
+              title: "异步遍历器",
+              path: "/books/ES6入门教程/异步遍历器",
+            },
+            {
+              title: "ArrayBuffer",
+              path: "/books/ES6入门教程/ArrayBuffer",
+            },
+            {
+              title: "最新提案",
+              path: "/books/ES6入门教程/最新提案",
+            },
+            {
+              title: "Decorator和Mixin",
+              path: "/books/ES6入门教程/Decorator和Mixin",
+            },
+            {
+              title: "函数式编程",
+              path: "/books/ES6入门教程/函数式编程",
+            },
+          ],
         },
         {
           title: "深入浅出webpack",

@@ -1,0 +1,18 @@
+---
+title: ES6与JavaScript
+author: vivien
+date: '2024-01-31'
+# headerImage: /about-bg.jpg # public 文件夹下的图片
+isShowComments: true    # 展示评论
+categories:     # 分类
+ - Note
+tags:       # 标签
+ - JavaScript
+---
+
+- ES6是JavaScript的下一代标准：ES6，也被称为ECMAScript 2015，是JavaScript语言的最新版本。它引入了许多新的语法和功能，对语言进行了广泛的增强和改进。
+- ES6对JavaScript进行了广泛的增强和改进：ES6引入了模块化、箭头函数、模板字符串、解构赋值、默认参数、let和const关键字等新特性，使得JavaScript开发更加灵活和强大。
+- ES6是ECMAScript标准的一个版本：ECMAScript是JavaScript语言的国际标准。ES6作为ECMAScript的第六个版本，提供了许多新的特性，使得JavaScript开发更加规范和标准化。随着时间的推移，ECMAScript标准也在不断演进，后续版本如ES7、ES8等也引入了更多的新功能。
+- JavaScript是ECMAScript标准的一种实现：虽然ES6是JavaScript的下一代标准，但并非所有的JavaScript引擎都完全支持ES6的所有特性。需要babel转码器，还需要polyfill或corejs。
+
+​        Babel 是一个广泛使用的 ES6 转码器，可以将 ES6 代码转为 ES5 代码，从而在老版本的浏览器执行。这意味着，你可以用 ES6 的方式编写程序，又不用担心现有环境是否支持。
