@@ -1,13 +1,16 @@
 ---
-title: 深入浅出webpack
+title: ES6
 author: vivien
-date: '2024-04-10'
+date: '2023-04-10'
 # headerImage: /about-bg.jpg # public 文件夹下的图片
 isShowComments: true    # 展示评论
 categories:     # 分类
- - 读书笔记
+ - Note
 tags:       # 标签
- - Vue
+ - JavaScript
 ---
 
-## 深入浅出webpack
+## ES6
+
+
+

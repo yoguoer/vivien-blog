@@ -14,7 +14,7 @@ module.exports = {
   },
   base: "/vivien-blog/", // 路径配置
   head: [
-    ["link", { rel: "icon", href: "logo.jpg" }], // 引入icon图标
+    ["link", { rel: "icon", href: "/logo.jpg" }], // 引入icon图标
   ],
   theme: "reco", // 主题配置
   themeConfig: {
@@ -50,16 +50,16 @@ module.exports = {
         ],
       },
       {
-        text: "读书笔记",
+        text: "Note",
         icon: "reco-document",
         items: [
           {
             text: "深入浅出webpack",
-            link: "/books/webpack/webpack/",
+            link: "/books/深入浅出webpack/为什么要使用webpack/",
           },
           {
-            text: "ES6",
-            link: "/books/ES6/ES6/",
+            text: "ES6入门教程",
+            link: "/books/ES6入门教程/ES6/",
           },
         ],
       },
@@ -82,22 +82,35 @@ module.exports = {
           path: "/messageBoard/messageBoard",
         },
       ],
-      "/books/ES6/": [
+      "/books/": [
         {
-          title: "ES6",
+          title: "ES6入门教程",
           collapsable: true, // 是否折叠
-          // link: "/xxx/aa.md",
-          // sidebarDepth: 2,// 缩放子级别名称
-          children: [{ title: "ES6", path: "/books/ES6/ES6" }],
+          sidebarDepth: 4, // 缩放子级别名称
+          children: [{ title: "ES6", path: "/books/ES6入门教程/ES6" }],
         },
-      ],
-      "/books/webpack/": [
         {
-          title: "webpack",
-          collapsable: true, // 是否折叠
-          // link: "/xxx/aa.md",
-          sidebarDepth: 2,
-          children: [{ title: "webpack", path: "/books/webpack/webpack" }],
+          title: "深入浅出webpack",
+          collapsable: true,
+          sidebarDepth: 4, // 缩放子级别名称
+          children: [
+            {
+              title: "为什么要使用webpack",
+              path: "/books/深入浅出webpack/为什么要使用webpack",
+            },
+            {
+              title: "webpack的使用",
+              path: "/books/深入浅出webpack/webpack的使用",
+            },
+            {
+              title: "手动使用webpack",
+              path: "/books/深入浅出webpack/手动使用webpack",
+            },
+            {
+              title: "更深入的一些知识",
+              path: "/books/深入浅出webpack/更深入的一些知识",
+            },
+          ],
         },
       ],
     },
@@ -107,10 +120,6 @@ module.exports = {
       appId: "zcWTwSXy2qwwag8rETtqiIZJ-gzGzoHsz",
       appKey: "DQwoEQ3tL4CUgnOSv0d9vHz8",
       showComment: false, // isShowComments: true  在需要添加评论的页面加上这个配置
-      placeholder:
-        "粘贴图片到此处可以自动上传，填写邮箱可以邮件收到回复哦(●'◡'●)",
-      visitor: true, // 阅读量统计
-      recordIP: true, // 记录评论者IP
     },
 
     // 插件
