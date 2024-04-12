@@ -31,6 +31,12 @@ module.exports = {
         { icon: "reco-github", link: "https://github.com/yoguoer" },
       ],
     },
+    // 评论插件配置（留言板）
+    valineConfig: {
+      appId: "eaXIQJQNeU73qI8Vnal6YUUq-gzGzoHsz",
+      appKey: "RBxwZ8cC5WMckHnFh9JdXWUo",
+      showComment: false, // isShowComments: true  在需要添加评论的页面加上这个配置
+    },
     subSidebar: "auto", // 生成子侧边栏
 
     // 导航栏配置
@@ -218,13 +224,6 @@ module.exports = {
           ],
         },
       ],
-    },
-
-    // 评论插件配置（留言板）
-    valineConfig: {
-      appId: "zcWTwSXy2qwwag8rETtqiIZJ-gzGzoHsz",
-      appKey: "DQwoEQ3tL4CUgnOSv0d9vHz8",
-      showComment: false, // isShowComments: true  在需要添加评论的页面加上这个配置
     },
 
     // 插件
