@@ -36,6 +36,20 @@ module.exports = {
     // 导航栏配置
     nav: [
       {
+        text: "Vue",
+        icon: "reco-blog",
+        items: [
+          {
+            text: "深入浅出webpack",
+            link: "/books/webpack/webpack/",
+          },
+          {
+            text: "ES6",
+            link: "/books/ES6/ES6/",
+          },
+        ],
+      },
+      {
         text: "读书笔记",
         icon: "reco-document",
         items: [
@@ -49,7 +63,8 @@ module.exports = {
           },
         ],
       },
-      { text: "留言板", link: "/messageBoard/messageBoard" },
+      { text: "TimeLine", link: "/timeline/", icon: "reco-date" },
+      { text: "留言板", link: "/messageBoard/messageBoard", icon: "reco-tag" },
       {
         text: "contact Vivien",
         items: [
@@ -64,7 +79,7 @@ module.exports = {
       "/messageBoard/": [
         {
           title: "messageBoard",
-          path: "/messageBoard/messageBoard" 
+          path: "/messageBoard/messageBoard",
         },
       ],
       "/books/ES6/": [
@@ -92,6 +107,10 @@ module.exports = {
       appId: "zcWTwSXy2qwwag8rETtqiIZJ-gzGzoHsz",
       appKey: "DQwoEQ3tL4CUgnOSv0d9vHz8",
       showComment: false, // isShowComments: true  在需要添加评论的页面加上这个配置
+      placeholder:
+        "粘贴图片到此处可以自动上传，填写邮箱可以邮件收到回复哦(●'◡'●)",
+      visitor: true, // 阅读量统计
+      recordIP: true, // 记录评论者IP
     },
 
     // 插件
@@ -108,7 +127,7 @@ module.exports = {
         {
           serviceWorker: true,
           updatePopup: {
-            message: "发现新内容可用",
+            message: "有新的内容更新",
             buttonText: "刷新",
           },
         },
@@ -122,20 +141,20 @@ module.exports = {
           },
         },
       ],
-      // 评论插件配置（文章底部）
-      [
-        "@vssue/vuepress-plugin-vssue",
-        {
-          platform: "github", //v3的platform是github，v4的是github-v4
-          locale: "zh", //语言
-          // 其他的 Vssue 配置
-          owner: "yoguoer", //github账户名
-          repo: "vivien-blog", //github一个项目的名称
-          clientId: "e4d9f627fcda10151da0", //注册的Client ID
-          clientSecret: "8dd6e4718305c68d64eadf159a511e5b8e31652f", //注册的Client Secret
-          autoCreateIssue: true, // 自动创建评论，默认是false，最好开启，这样首次进入页面的时候就不用去点击创建评论的按钮了。
-        },
-      ],
+      // // 评论插件配置（文章底部）
+      // [
+      //   "@vssue/vuepress-plugin-vssue",
+      //   {
+      //     platform: "github", //v3的platform是github，v4的是github-v4
+      //     locale: "zh", //语言
+      //     // 其他的 Vssue 配置
+      //     owner: "yoguoer", //github账户名
+      //     repo: "vivien-blog", //github一个项目的名称
+      //     clientId: "e4d9f627fcda10151da0", //注册的Client ID
+      //     clientSecret: "8dd6e4718305c68d64eadf159a511e5b8e31652f", //注册的Client Secret
+      //     autoCreateIssue: true, // 自动创建评论，默认是false，最好开启，这样首次进入页面的时候就不用去点击创建评论的按钮了。
+      //   },
+      // ],
     ],
   },
 };
