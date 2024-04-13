@@ -41,22 +41,22 @@ module.exports = {
 
     // 导航栏配置
     nav: [
+      // {
+      //   text: "Vue",
+      //   icon: "reco-blog",
+      //   items: [
+      //     {
+      //       text: "深入浅出webpack",
+      //       link: "/books/webpack/webpack/",
+      //     },
+      //     {
+      //       text: "ES6",
+      //       link: "/books/ES6/ES6/",
+      //     },
+      //   ],
+      // },
       {
-        text: "Vue",
-        icon: "reco-blog",
-        items: [
-          {
-            text: "深入浅出webpack",
-            link: "/books/webpack/webpack/",
-          },
-          {
-            text: "ES6",
-            link: "/books/ES6/ES6/",
-          },
-        ],
-      },
-      {
-        text: "Note",
+        text: "书籍",
         icon: "reco-document",
         items: [
           {
@@ -66,6 +66,10 @@ module.exports = {
           {
             text: "ES6入门教程",
             link: "/books/ES6入门教程/ES6与JavaScript/",
+          },
+          {
+            text: "TypeScript教程",
+            link: "/books/TypeScript教程/简介和基本用法/",
           },
         ],
       },
@@ -90,9 +94,32 @@ module.exports = {
       ],
       "/books/": [
         {
+          title: "深入浅出webpack",
+          collapsable: true,
+          sidebarDepth: 2, // 缩放子级别名称
+          children: [
+            {
+              title: "为什么要使用webpack",
+              path: "/books/深入浅出webpack/为什么要使用webpack",
+            },
+            {
+              title: "webpack的使用",
+              path: "/books/深入浅出webpack/webpack的使用",
+            },
+            {
+              title: "手动使用webpack",
+              path: "/books/深入浅出webpack/手动使用webpack",
+            },
+            {
+              title: "更深入的一些知识",
+              path: "/books/深入浅出webpack/更深入的一些知识",
+            },
+          ],
+        },
+        {
           title: "ES6入门教程",
           collapsable: true, // 是否折叠
-          sidebarDepth: 4, // 缩放子级别名称
+          sidebarDepth: 2, // 缩放子级别名称
           children: [
             {
               title: "ES6与JavaScript",
@@ -201,25 +228,57 @@ module.exports = {
           ],
         },
         {
-          title: "深入浅出webpack",
+          title: "TypeScript教程",
           collapsable: true,
-          sidebarDepth: 4, // 缩放子级别名称
+          sidebarDepth: 2, // 缩放子级别名称
           children: [
             {
-              title: "为什么要使用webpack",
-              path: "/books/深入浅出webpack/为什么要使用webpack",
+              title: "简介和基本用法",
+              path: "/books/TypeScript教程/简介和基本用法",
             },
             {
-              title: "webpack的使用",
-              path: "/books/深入浅出webpack/webpack的使用",
+              title: "类型系统",
+              path: "/books/TypeScript教程/类型系统",
             },
             {
-              title: "手动使用webpack",
-              path: "/books/深入浅出webpack/手动使用webpack",
+              title: "数组和元组",
+              path: "/books/TypeScript教程/数组和元组",
             },
             {
-              title: "更深入的一些知识",
-              path: "/books/深入浅出webpack/更深入的一些知识",
+              title: "symbol类型和对象",
+              path: "/books/TypeScript教程/symbol类型和对象",
+            },
+            {
+              title: "函数",
+              path: "/books/TypeScript教程/函数",
+            },
+            {
+              title: "interface和类",
+              path: "/books/TypeScript教程/interface和类",
+            },
+            {
+              title: "泛型和类型断言",
+              path: "/books/TypeScript教程/泛型和类型断言",
+            },
+            {
+              title: "Enum、namespace和模块",
+              path: "/books/TypeScript教程/Enum、namespace和模块",
+            },
+            {
+              title: "装饰器",
+              path: "/books/TypeScript教程/装饰器",
+            },
+            {
+              title: "declare关键字",
+              path: "/books/TypeScript教程/declare关键字",
+            },
+            {
+              title: "类型运算符和类型映射",
+              path: "/books/TypeScript教程/类型运算符和类型映射",
+            },
+            {
+              title: "其它",
+              path: "/books/TypeScript教程/其它",
             },
           ],
         },
