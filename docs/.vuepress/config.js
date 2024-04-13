@@ -41,20 +41,30 @@ module.exports = {
 
     // 导航栏配置
     nav: [
-      // {
-      //   text: "Vue",
-      //   icon: "reco-blog",
-      //   items: [
-      //     {
-      //       text: "深入浅出webpack",
-      //       link: "/books/webpack/webpack/",
-      //     },
-      //     {
-      //       text: "ES6",
-      //       link: "/books/ES6/ES6/",
-      //     },
-      //   ],
-      // },
+      {
+        text: "笔记",
+        icon: "reco-blog",
+        items: [
+          {
+            text: "学习笔记",
+            items: [
+              {
+                text: "Vue3学习笔记",
+                link: "/note/Vue3学习笔记/Vue3与Vue2对比/",
+              }
+            ]
+          },
+          {
+            text: "踩坑笔记",
+            items: [
+              // {
+              //   text: "深入浅出webpack",
+              //   link: "/books/webpack/webpack/",
+              // }
+            ]
+          },
+        ],
+      },
       {
         text: "书籍",
         icon: "reco-document",
@@ -283,6 +293,35 @@ module.exports = {
           ],
         },
       ],
+      "/note/": [
+        {
+          title: "Vue3学习笔记",
+          collapsable: true,
+          sidebarDepth: 2, // 缩放子级别名称
+          children: [
+            {
+              title: "Vue3与Vue2对比",
+              path: "/note/Vue3学习笔记/Vue3与Vue2对比",
+            },
+            {
+              title: "创建Vue3项目",
+              path: "/note/Vue3学习笔记/创建Vue3项目",
+            },
+            {
+              title: "Composition API",
+              path: "/note/Vue3学习笔记/CompositionAPI",
+            },
+            {
+              title: "新的组件",
+              path: "/note/Vue3学习笔记/新的组件",
+            },
+            {
+              title: "其它新的 API",
+              path: "/note/Vue3学习笔记/其它新的API",
+            },
+          ],
+        },
+      ]
     },
 
     // 插件
