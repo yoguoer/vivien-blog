@@ -16,7 +16,7 @@ tags:       # 标签
 
 ​        Webpack提供了模块化开发的基础设施，使得开发者可以更加高效地组织和维护代码，同时提供了各种优化和自定义的功能，使得开发者可以构建出更加健壮和兼容的应用程序。
 
-## 1、Webpack的功能和用途
+## Webpack的功能和用途
 
 - 模块化开发：Webpack可以很好地处理和打包JavaScript模块，以及其他的浏览器不能直接运行的拓展语言（如TypeScript、Scss等），使得开发者能够更加高效地组织和维护代码。可以将应用程序拆分成多个模块，每个模块只关注自己的功能，降低了代码的耦合度，提高了代码的可维护性。
 - 自动刷新：监听本地源代码的变化，自动构建，刷新浏览器。
@@ -29,7 +29,7 @@ tags:       # 标签
 - 优化输出/文件优化：Webpack可以对输出文件进行优化，如压缩代码、提取公共代码等，以减少输出文件的大小，提高网页加载速度。
 - 兼容性/代码转换：通过转换和编译最新的JavaScript语法和ECMAScript新特性，Webpack可以帮助提高代码的兼容性。Webpack支持将各种类型的文件（如ES6、TypeScript、Sass、Less等）转换成浏览器可以识别的JavaScript、CSS等文件。
 
-## 2、使用Webpack能解决的问题
+## 使用Webpack能解决的问题
 
 - 在日常的开发中经常在一个index.html页面中引入多个css、js文件，如不小心改变JavaScript文件加载顺序，项目会崩溃，每个script标签都需要向服务器请求一次静态资源，过多的请求会拖慢网页的渲染速度，会导致页面加载慢。使用Webpack可以将他们合并为一个文件，优化前端性能。
 - 多个script标签中，全局变量的作用域污染问题。在wepack中，多个模块的作用域是隔离的，彼此不会出现命名冲突。
@@ -42,7 +42,7 @@ tags:       # 标签
 - 当今JavaScript、css的语法规范不断更新，但是浏览器的兼容性却不能同步的更新，开发者可以通过 webpack 预处理器进行编译，自由的使用 JS、CSS 等语言的新语法。通过转换和编译最新的JavaScript语法和ECMAScript新特性，Webpack可以帮助提高代码的兼容性。
 - 通过导入导出语句可以清晰地看到模块间的依赖关系，模块可以借助工具进行打包，页面可以加载合并后的资源，减少了网络开销。
 
-## 3、工作原理
+## 工作原理
 
 ​        Webpack的工作原理是将各种资源文件看作模块，建立依赖树，将模块编译成浏览器能够识别的格式，然后根据依赖树将模块组合成一个bundle文件，最后将bundle文件发布到网站上。通过使用Webpack进行模块化打包，可以减少HTTP请求，从而提高网页的载入速度。
 
@@ -50,7 +50,7 @@ tags:       # 标签
 
 ![img](http://www.kdocs.cn/api/v3/office/copy/aW1hemVqci9aRGJWRFBlU0NiRkhZY3BlS3hsR0wybEpIRFBBTlB0UGpWZ3hQWEVnM3lqak16c1Y4eXR0K2tqcEdpenRiNjdyRy93Nno2QjVjMWZObjAyeDZKQ3ZOcXozdmdjcTlidUYrWmttaEdNdG1OMEJnN3dhbW9yaER4cm5hOGw5NHVGODV2TklOSGh5SUZET0JjRHp2RUFDMll4cEJVcUZZTTdYckxOSFVRcmtDeXJBbncvSit1MWhKUFRLM3Y3QnNrT2hhUVN3VWdVT3BzYlRBVCtGR2s0Sm5GRUNmblFNeEYxZjk1K0IxZ2tSeW0xNkFZdDNnT2NlZ0dSMHZMR3FjRWJXczlBPQ==/attach/object/ZQHLABIBWA?)
 
-## 4、流程概括
+## 流程概括
 
 ​        Webpack 的运行流程是一个串行的过程，从启动到结束会依次执行以下流程：
 

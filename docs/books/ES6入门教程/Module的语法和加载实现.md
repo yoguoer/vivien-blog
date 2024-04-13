@@ -10,7 +10,7 @@ tags:       # 标签
  - JavaScript
 ---
 
-## 1、概述
+## 概述
 
 ​        ES6模块的设计思想是尽量的静态化，使得编译时就能确定模块的依赖关系以及输入和输出的变量，CommonJS和AMD模块都只能在运行时确定这些东西。
 
@@ -30,7 +30,7 @@ import { stat, exists, readFile } from 'fs';
 - 将来浏览器的新API就能用模块格式提供，不再必须做成全局变量或者navigator对象的属性。
 - 不再需要对象作为命名空间(比如Math对象)，未来这些功能可以通过模块提供。
 
-## 2、import()
+## import()
 
 ​        import命令会被JS引擎静态分析，先于模块内的其他语句执行(import命令叫做连接binding其实更合适)。import和export命令只能在模块的顶层，不能在代码块中(比如在if代码块中，或在函数中)。这样的设计有利于编译器提高效率，但也导致无法在运行时加载模块。在语法上，条件加载不可能实现。
 
@@ -119,7 +119,7 @@ async function main() {
 main();
 ```
 
-## 3、严格模式
+## 严格模式
 
 ​         ES6的模块自动采用严格模式，不管有没有在模块头部加上"use strict"。主要有以下限制。
 
@@ -141,7 +141,7 @@ main();
 
 ​        尤其注意this的限制。ES6模块中，顶层的this指向undefined，即不应该在顶层代码使用this。
 
-## 4、export 命令
+## export 命令
 
 ​        一个模块就是一个独立的文件。该文件内部的所有变量，外部无法获取。如果希望外部能够读取模块内部的某个变量，就必须使用export关键字输出该变量。
 
@@ -179,7 +179,7 @@ setTimeout(() => foo = 'baz', 500); //500毫秒之后变成baz
 
 ​          export命令可以出现在模块的任何位置，只要处于模块顶层就可以。如果处于块级作用域内，就会报错。这是因为处于条件代码块中，就没法做静态优化了，违背了ES6模块的设计初衷。
 
-## 5、import 命令
+## import 命令
 
 ​        使用export命令定义了模块的对外接口以后，其他JS文件就可以通过import命令加载这个模块。
 
@@ -211,7 +211,7 @@ if (x === 1) {
 
 ​        import语句会执行所加载的模块，如果多次重复执行同一句import语句，那么只会执行一次，而不会执行多次。
 
-## 6、模块的整体加载
+## 模块的整体加载
 
 ​        除了指定加载某个输出值，还可以使用整体加载，即用星号（*）指定一个对象，所有输出值都加载在这个对象上面。注意，模块整体加载所在的那个对象应该是可以静态分析的，所以不允许运行时改变。
 
@@ -224,7 +224,7 @@ circle.foo = 'hello';
 circle.area = function () {};
 ```
 
-## 7、export default 命令
+## export default 命令
 
 ​        export default命令用于为模块指定默认输出。显然，一个模块只能有一个默认输出，因此export default命令只能使用一次，所以import命令后面才不用加大括号，因为只可能唯一对应export default命令。export default也可以用来输出类。
 
@@ -283,7 +283,7 @@ import _ from 'lodash';//输入 lodash 模块
 import _, { each, forEach } from 'lodash'; //如果想在一条import语句中同时输入默认方法和其他接口
 ```
 
-## 8、export 与 import 的复合写法
+## export 与 import 的复合写法
 
 ​        如果在一个模块之中，先输入后输出同一个模块，import语句可以与export语句写在一起。
 
@@ -313,11 +313,11 @@ import * as ns from "mod";
 export {ns};
 ```
 
-## 9、模块的继承
+## 模块的继承
 
 ​        模块之间也可以继承。注意，export *命令并不会导出从其他模块导入的 default 导出项。因为 export * 只导出那些被明确标记为导出的项，而默认导出并不属于这种情况，它在每个模块中只能有一个，并且它并不需要一个明确的导出名称。
 
-## 10、跨模块常量
+## 跨模块常量
 
 ​        如果想设置跨模块的常量(即跨多个文件)，或者说一个值要被多个模块共享，可以采用下面的写法。
 
@@ -356,7 +356,7 @@ import {db, users} from './constants/index';
 
 ## Module 的加载实现
 
-## 1、浏览器加载
+## 浏览器加载
 
 ### 传统方法
 
@@ -386,7 +386,7 @@ import {db, users} from './constants/index';
 const isNotModuleScript = this !== undefined;
 ```
 
-## 2、ES6 模块与 CommonJS 模块的差异
+## ES6 模块与 CommonJS 模块的差异
 
 ​        ES6模块与CommonJS模块有两个重大差异。
 
@@ -411,7 +411,7 @@ const isNotModuleScript = this !== undefined;
 }
 ```
 
-## 3、Node.js 的模块加载方法
+## Node.js 的模块加载方法
 
 ​       Node.js要求ES6模块采用.mjs后缀文件名。就是说，只要脚本文件里使用import或export命令，那么就必须采用.mjs后缀名。Node.js遇到.mjs文件，就认为它是ES6模块，默认启用严格模式，不必在每个模块文件顶部指定"use strict"。如果不希望将后缀名改成.mjs，可以在项目的package.json文件中指定type字段为module。一旦设置了以后，该目录里面的JS脚本就被解释成ES6模块。
 
@@ -567,7 +567,7 @@ import './foo.mjs?query=1'; // 加载 ./foo 传入参数 ?query=1
 - __filename
 - __dirname
 
-## 4、循环加载
+## 循环加载
 
 ​        循环加载指的是a脚本的执行依赖b脚本，而b脚本的执行又依赖a脚本。通常，循环加载表示存在强耦合，如果处理不好，还可能导致递归加载，使得程序无法执行，因此应该避免出现。模块加载机制必须考虑循环加载的情况。
 

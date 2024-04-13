@@ -79,7 +79,7 @@ tags:       # 标签
 
   用于返回对象的所有属性，基本等同于Object.getOwnPropertyNames与Object.getOwnPropertySymbols之和。如果第一个参数不是对象，会报错。
 
-## 2、实例：使用 Proxy 实现观察者模式
+## 实例：使用 Proxy 实现观察者模式
 
   观察者模式指的是函数自动观察数据对象，一旦对象有变化，函数就会自动执行。
 

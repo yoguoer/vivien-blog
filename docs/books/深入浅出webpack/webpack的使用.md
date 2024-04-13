@@ -12,7 +12,7 @@ tags:       # 标签
 
 ## Webpack 的使用
 
-## 1、Webpack 配置文件与核心概念
+## Webpack 配置文件与核心概念
 
 - webpack.config.js : 用于存储webpack配置信息，用于控制Webpack的行为。常规的配置如下：
 
@@ -100,7 +100,7 @@ Webpack 是基于 Node.js 运行的，所以采用 Common.js 模块化规范
   - devtool：指定开发工具，可以用来在开发过程中进行源码映射。
   - resolve：指定模块解析规则，可以设置别名、扩展等。
 
-## 2、webpack的使用步骤
+## webpack的使用步骤
 
 ​        Webpack是一个用于现代JavaScript应用程序的静态模块打包器（module bundler）。它处理应用程序时，会递归地构建一个依赖关系图（dependency graph），其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个bundle。使用Webpack的基本步骤：
 
@@ -110,7 +110,7 @@ Webpack 是基于 Node.js 运行的，所以采用 Common.js 模块化规范
 - ④运行npm run build命令，启动Webpack进行项目打包。
 - ⑤还可以通过运行Webpack命令npx webpack --config webpack.config.js来完成。
 
-## 3、loader
+## loader
 
 ![img](http://www.kdocs.cn/api/v3/office/copy/aW1hemVqci9aRGJWRFBlU0NiRkhZY3BlS3hsR0wybEpIRFBBTlB0UGpWZ3hQWEVnM3lqak16c1Y4eXR0K2tqcEdpenRiNjdyRy93Nno2QjVjMWZObjAyeDZKQ3ZOcXozdmdjcTlidUYrWmttaEdNdG1OMEJnN3dhbW9yaER4cm5hOGw5NHVGODV2TklOSGh5SUZET0JjRHp2RUFDMll4cEJVcUZZTTdYckxOSFVRcmtDeXJBbncvSit1MWhKUFRLM3Y3QnNrT2hhUVN3VWdVT3BzYlRBVCtGR2s0Sm5GRUNmblFNeEYxZjk1K0IxZ2tSeW0xNkFZdDNnT2NlZ0dSMHZMR3FjRWJXczlBPQ==/attach/object/YH2K6BIANI?)
 
@@ -296,7 +296,7 @@ module: {
 
 ​        thead是多进程打包：开启电脑的多个进程同时干一件事，速度更快。（注意：请仅在特别耗时的操作中使用，因为每个进程启动就有大约为 600ms 左右开销。）我们启动进程的数量就是我们 CPU 的核数。
 
-## 4、plugins
+## plugins
 
 ​       Plugin 是用来扩展 Webpack 功能的，通过在构建流程里注入钩子实现，它给 Webpack 带来了很大的灵活性。在 Webpack 构建流程中的特定时机会广播出对应的事件，插件可以监听这些事件的发生，在特定时机做对应的事情。plugins 配置项接受一个数组，数组里每一项都是一个要使用的 Plugin 的实例，Plugin 需要的参数通过构造函数传入。
 
@@ -356,7 +356,7 @@ module.exports = {
 
 ​        通过注册这些钩子函数，插件可以在构建过程的各个阶段插入自定义的逻辑，实现各种不同的功能，如资源管理、性能优化、代码拆分、环境变量注入等。
 
-## 5、devServer
+## devServer
 
 ​         在Webpack中，webpack-dev-server是一个非常重要的工具，用于开发阶段提供服务器功能。DevServer 会启动一个 HTTP 服务器用于服务网页请求，同时会帮助启动 Webpack ，并接收 Webpack 发出的文件更变信号，通过 WebSocket 协议自动刷新网页做到实时预览。
 
@@ -429,7 +429,7 @@ module.exports = {
   },
 ```
 
-## 6、优化和生产配置
+## 优化和生产配置
 
 ![img](http://www.kdocs.cn/api/v3/office/copy/aW1hemVqci9aRGJWRFBlU0NiRkhZY3BlS3hsR0wybEpIRFBBTlB0UGpWZ3hQWEVnM3lqak16c1Y4eXR0K2tqcEdpenRiNjdyRy93Nno2QjVjMWZObjAyeDZKQ3ZOcXozdmdjcTlidUYrWmttaEdNdG1OMEJnN3dhbW9yaER4cm5hOGw5NHVGODV2TklOSGh5SUZET0JjRHp2RUFDMll4cEJVcUZZTTdYckxOSFVRcmtDeXJBbncvSit1MWhKUFRLM3Y3QnNrT2hhUVN3VWdVT3BzYlRBVCtGR2s0Sm5GRUNmblFNeEYxZjk1K0IxZ2tSeW0xNkFZdDNnT2NlZ0dSMHZMR3FjRWJXczlBPQ==/attach/object/VJWLWBIAZM?)
 
@@ -996,7 +996,7 @@ plugins: [
 
 这样配置后，生成的PWA应用将具有离线访问、全屏体验、搜索引擎友好等特性。
 
-## 7、git-hooks与husky
+## git-hooks与husky
 
 ​        为了保证团队里的开发人员提交的代码符合规范，我们可以在开发者上传代码时进行校验。 我们常用 husky 来协助进行代码提交时的 eslint 校验。husky使git hooks更易于管理，因为我们不必手动编写代码，我们只需要在husky提供的配置文件中添加想要执行的命令，例如提交之前运行ESLint，除此之外的一切都由husky处理。
 
@@ -1013,7 +1013,7 @@ prepare是一个npm钩子，意思是安装依赖的时候，会先执行husky i
 2. 执行以下命令来移交git-hook的配置权限
 3. 给这个文件添加可执行权限
 
-## 8、常见的minimizer
+## 常见的minimizer
 
 ​        确保你已经安装了要使用的minimizer对应的npm包，然后在配置文件中导入它们。
 
@@ -1033,7 +1033,7 @@ prepare是一个npm钩子，意思是安装依赖的时候，会先执行husky i
 
 ​        用于HTML压缩的插件，通过简化HTML标签、移除未使用的HTML元素等方式，减少HTML文件大小并提高加载性能。可以帮助生成HTML文件，并将所有资源链接到生成的HTML文件中。
 
-## 9、环境变量
+## 环境变量
 
 ​        想要消除 webpack.config.js 在开发环境和生产环境之间的差异，需要环境变量。webpack命令行环境配置的 --env 参数，可以允许传入任意数量的环境变量。而webpack.config.js 中可以访问到这些环境变量。例如，--env production 或--env goal=local。
 
@@ -1061,7 +1061,7 @@ module.exports = (env) => {
 
 在上面的示例中，我们通过将 module.exports 对象转换为函数，并传递一个名为 env 的参数，来访问环境变量。然后，我们根据环境变量的值来动态配置 webpack 的输出文件名和环境mode。
 
-## 10、编写loader和plugin
+## 编写loader和plugin
 
 - loader像一个翻译官，把读到的源文件内容转译成新的文件内容，并且每个loader通过链式操作，把源文件一步步翻译成我们想要的样子。①编写loader要遵循单一原则，每个loader只做一种转译工作，②每个loader拿到的是源文件内容，可以通过返回值的方式将处理后的内容输出，③也可以调用this.callback()方法，将内容返回给webpack，④还可以通过this.async()生成一个callback函数，再用它将处理后的内容输出去。
 

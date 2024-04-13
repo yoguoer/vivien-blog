@@ -10,7 +10,7 @@ tags:       # 标签
  - JavaScript
 ---
 
-## 1、Iterator（遍历器）的概念
+## Iterator（遍历器）的概念
 
 ​        遍历器(Iterator)是一种接口，为各种不同的数据结构提供统一的访问机制。任何数据结构只要部署Iterator接口，就可以完成遍历操作(即依次处理该数据结构的所有成员)。
 
@@ -79,7 +79,7 @@ interface IterationResult { //next方法返回值
 }
 ```
 
-## 2、默认 Iterator 接口
+## 默认 Iterator 接口
 
 ​        Iterator接口的目的，就是为所有数据结构提供了一种统一的访问机制，即for...of循环。当使用for...of循环遍历某种数据结构时，该循环会自动去寻找Iterator接口。一种数据结构只要部署了Iterator接口(具有Symbol.iterator属性)，我们就称这种数据结构是可遍历的(iterable)，部署了遍历器接口，调用这个接口，就会返回一个遍历器对象。
 
@@ -125,7 +125,7 @@ NodeList.prototype[Symbol.iterator] = [][Symbol.iterator];
 
 ​        注意，普通对象部署数组的Symbol.iterator方法并无效果。如果Symbol.iterator方法对应的不是遍历器生成函数(即会返回一个遍历器对象)，解释引擎将会报错。
 
-## 3、调用 Iterator 接口的场合
+## 调用 Iterator 接口的场合
 
 ​        有一些场合会默认调用Iterator接口(即Symbol.iterator方法)。
 
@@ -139,7 +139,7 @@ NodeList.prototype[Symbol.iterator] = [][Symbol.iterator];
   - Promise.all()
   - Promise.race()
 
-## 4、字符串的 Iterator 接口
+## 字符串的 Iterator 接口
 
 ​        字符串是一个类似数组的对象，也原生具有Iterator接口。调用Symbol.iterator方法返回一个遍历器对象，在这个遍历器上可以调用next方法实现对于字符串的遍历。
 
@@ -155,7 +155,7 @@ iterator.next()  // { value: undefined, done: true }
 
   可以覆盖原生的Symbol.iterator方法，达到修改遍历器行为的目的。
 
-## 5、Iterator 接口与 Generator 函数
+## Iterator 接口与 Generator 函数
 
 Symbol.iterator方法的最简单实现几乎不用部署任何代码，只要用yield命令给出每一步的返回值即可。
 
@@ -182,7 +182,7 @@ for (let x of obj) {
 // "world"
 ```
 
-## 6、遍历器对象的 return()，throw()
+## 遍历器对象的 return()，throw()
 
 ​        遍历器对象除了具有next方法，还可以具有return方法和throw方法。如果自己写遍历器对象生成函数，那么next方法是必须部署的，return方法和throw方法是否部署是可选的。
 
@@ -203,7 +203,7 @@ for (let line of readLinesSync(fileName)) {
 }
 ```
 
-## 7、for...of 循环
+## for...of 循环
 
 ​     一个数据结构只要部署了Symbol.iterator属性，就被视为具有iterator接口，就可以用for...of循环遍历它的成员。就是说，for...of循环内部调用的是数据结构的Symbol.iterator方法。for...of循环可以使用的范围包括数组、Set和Map结构、某些类似数组的对象(比如arguments对象、DOM NodeList对象)、Generator对象以及字符串。
 

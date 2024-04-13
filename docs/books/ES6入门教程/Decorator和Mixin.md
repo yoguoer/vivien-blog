@@ -10,7 +10,7 @@ tags:       # 标签
  - JavaScript
 ---
 
-## 1、类的装饰
+## 类的装饰
 
 ​        装饰器可以用来装饰整个类。装饰器是一个对类进行处理的函数，装饰器函数的第一个参数就是所要装饰的目标类。注意，装饰器对类的行为的改变是代码编译时发生的，而不是在运行时。这意味着，装饰器能在编译阶段运行代码。也就是说，装饰器本质就是编译时执行的函数。
 
@@ -59,7 +59,7 @@ class MyClass {}
 MyClass.isTestable // false
 ```
 
-## 2、方法的装饰
+## 方法的装饰
 
 ​        装饰器不仅可以装饰类，还可以装饰类的属性。
 
@@ -111,7 +111,7 @@ class Example {
 
 ​        除了注释，装饰器还能用来类型检查。所以，对于类来说，这项功能相当有用。从长期来看，它将是JavaScript代码静态分析的重要工具。
 
-## 3、为什么装饰器不能用于函数？
+## 为什么装饰器不能用于函数？
 
 ​        装饰器只能用于类和类的方法，不能用于函数，因为存在函数提升。类是不会提升的，所以就没有这方面的问题。
 
@@ -142,7 +142,7 @@ function loggingDecorator(wrapped) {
 const wrapped = loggingDecorator(doSomething);
 ```
 
-## 4、core-decorators.js
+## core-decorators.js
 
 ​        是一个第三方模块，提供了几个常见的装饰器，通过它可以更好地理解装饰器。
 
@@ -156,7 +156,7 @@ const wrapped = loggingDecorator(doSomething);
 
 @suppressWarnings：suppressWarnings装饰器抑制deprecated装饰器导致的console.warn()调用。但是，异步代码发出的调用除外。
 
-## 5、使用装饰器实现自动发布事件
+## 使用装饰器实现自动发布事件
 
 ​        我们可以使用装饰器使得对象的方法被调用时，自动发出一个事件。
 
@@ -204,7 +204,7 @@ $ bash-node index.js
 数据:  undefined
 ```
 
-## 6、Mixin
+## Mixin
 
 ​        在装饰器的基础上，可以实现Mixin模式。所谓Mixin模式就是对象继承的一种替代方案，中文译为混入，意为在一个对象中混入另外一个对象的方法。
 
@@ -228,7 +228,7 @@ class MyClass extends Mixin1(Mixin2(MyBaseClass)) {
 } //这种写法的一个好处是可以调用super，因此可以避免在混入过程中覆盖父类的同名方法。
 ```
 
-## 7、Trait
+## Trait
 
 ​        也是一种装饰器，效果与Mixin类似，但是提供更多功能，比如防止同名方法的冲突、排除混入某些方法、为混入的方法起别名等等。
 
