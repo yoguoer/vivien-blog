@@ -51,6 +51,10 @@ module.exports = {
               {
                 text: "Vue3学习笔记",
                 link: "/note/Vue3学习笔记/Vue3与Vue2对比/",
+              },
+              {
+                text: "VueCLI学习笔记",
+                link: "/note/学习笔记/VueCLI学习笔记/",
               }
             ]
           },
@@ -320,6 +324,17 @@ module.exports = {
               path: "/note/Vue3学习笔记/其它新的API",
             },
           ],
+        },
+        {
+          title: "学习笔记",
+          collapsable: true,
+          sidebarDepth: 2, // 缩放子级别名称
+          children: [
+            {
+              title: "VueCLI学习笔记",
+              path: "/note/学习笔记/VueCLI学习笔记",
+            },
+          ]
         },
       ]
     },
