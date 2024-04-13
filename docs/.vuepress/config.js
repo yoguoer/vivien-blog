@@ -55,16 +55,20 @@ module.exports = {
               {
                 text: "VueCLI学习笔记",
                 link: "/note/学习笔记/VueCLI学习笔记/",
+              },
+              {
+                text: "webpack执行流程",
+                link: "/note/学习笔记/webpack执行流程/",
               }
             ]
           },
           {
             text: "踩坑笔记",
             items: [
-              // {
-              //   text: "深入浅出webpack",
-              //   link: "/books/webpack/webpack/",
-              // }
+              {
+                text: "测试",
+                link: "/books/webpack/webpack/",
+              }
             ]
           },
         ],
@@ -333,6 +337,10 @@ module.exports = {
             {
               title: "VueCLI学习笔记",
               path: "/note/学习笔记/VueCLI学习笔记",
+            },
+            {
+              title: "webpack执行流程",
+              path: "/note/学习笔记/webpack执行流程",
             },
           ]
         },
