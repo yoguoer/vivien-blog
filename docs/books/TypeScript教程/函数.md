@@ -5,7 +5,7 @@ date: '2024-04-08'
 # headerImage: /about-bg.jpg # public 文件夹下的图片
 isShowComments: true    # 展示评论
 categories:     # 分类
- - Note
+ - Books
 tags:       # 标签
  - TypeScript
 ---

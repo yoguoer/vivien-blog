@@ -5,7 +5,7 @@ date: '2024-03-23'
 # headerImage: /about-bg.jpg # public 文件夹下的图片
 isShowComments: true    # 展示评论
 categories:     # 分类
- - Note
+ - Notes
 tags:       # 标签
  - Vue
 ---
