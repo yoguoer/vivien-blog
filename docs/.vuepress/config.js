@@ -66,8 +66,8 @@ module.exports = {
             text: "踩坑笔记",
             items: [
               {
-                text: "测试",
-                link: "/books/webpack/webpack/",
+                text: "Vue2响应式原理",
+                link: "/note/踩坑笔记/Vue2响应式原理/",
               }
             ]
           },
@@ -341,6 +341,17 @@ module.exports = {
             {
               title: "webpack执行流程",
               path: "/note/学习笔记/webpack执行流程",
+            },
+          ]
+        },
+        {
+          title: "踩坑笔记",
+          collapsable: true,
+          sidebarDepth: 2, // 缩放子级别名称
+          children: [
+            {
+              title: "Vue2响应式原理",
+              path: "/note/踩坑笔记/Vue2响应式原理",
             },
           ]
         },
