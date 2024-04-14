@@ -386,6 +386,7 @@ module.exports = {
           },
         },
       ],
+      ['vuepress-plugin-code-copy', true],
       // // 评论插件配置（文章底部）
       // [
       //   "@vssue/vuepress-plugin-vssue",
