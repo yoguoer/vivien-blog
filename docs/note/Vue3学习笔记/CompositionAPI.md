@@ -170,7 +170,7 @@ function reactive(obj) {
 - 修改整个对象时：
   - reactive重新分配一个新对象，会失去响应式(可以使用Object.assign去整体替换)。
 
-![img](http://www.kdocs.cn/api/v3/office/copy/VmN1M25NbEhiZTNVajBMRzd1ZzdBQ2dmN01BS0Z5ZVBFdEFneExGOTRuREhIUk9BRjVwWDJvMnREK3VwbW1iU1N2eUttNjQ4TFllczF4NDZyYzRjV2I5bFdKZVhLUEZXQVc2cndjNURwVkhYZERnM2FRUzgrbmhjT1d4eVVzazlzY1l6RENOSnNMaStGU1JXd0RrQ3VIS3d5alFhUGt1SnIwa1Q4L3NzR2RveEttMWd6SWw0eFNaZStLaSs2MWVVb04zanVrVXhoL0xXenNiSWhDb01UTVJjVjVKTkZKYXlSQTMxY2lmeGx4ckh2RTZuMVlsNjRKZzU5YmE1RWd6M1ZjL2gvWGlpOWdJPQ==/attach/object/JFV4RDYXABQGE?)
+![img](./images/vue3Learning-6.png)
 
 - 使用原则：
   - 若需要一个基本类型的响应式数据，必须使用ref。
@@ -307,7 +307,7 @@ watchEffect(()=>{
 - 借助storeToRefs将store中的数据转为ref对象，方便在模板中使用。
 - 注意：pinia提供的storeToRefs只会将数据做转换，而不关注store里的方法。而Vue的toRefs会转换store中的所有数据包括方法。
 
-![img](http://www.kdocs.cn/api/v3/office/copy/VmN1M25NbEhiZTNVajBMRzd1ZzdBQ2dmN01BS0Z5ZVBFdEFneExGOTRuREhIUk9BRjVwWDJvMnREK3VwbW1iU1N2eUttNjQ4TFllczF4NDZyYzRjV2I5bFdKZVhLUEZXQVc2cndjNURwVkhYZERnM2FRUzgrbmhjT1d4eVVzazlzY1l6RENOSnNMaStGU1JXd0RrQ3VIS3d5alFhUGt1SnIwa1Q4L3NzR2RveEttMWd6SWw0eFNaZStLaSs2MWVVb04zanVrVXhoL0xXenNiSWhDb01UTVJjVjVKTkZKYXlSQTMxY2lmeGx4ckh2RTZuMVlsNjRKZzU5YmE1RWd6M1ZjL2gvWGlpOWdJPQ==/attach/object/W77SPEAXADQGG?)
+![img](./images/vue3Learning-7.png)
 
 ## 其它Composition API
 

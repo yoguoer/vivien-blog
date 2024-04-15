@@ -114,7 +114,7 @@ vue create my-project
 
 ​        通过预设和提示来统一管理用户在初始化项目时的交互。
 
-![image-20240413163629524](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163629524.png)
+![image](./images/VueCLILearning-1.png)
 
 ​        可以根据自己的项目需求(可以选择使用Babel进行转译，或者使用TypeScript来编写代码。你还可以选择是否集成ESLint、单元测试等其他功能)来自定义项目工程配置，这样会更加的灵活。
 
@@ -124,11 +124,11 @@ vue create my-project
 
 ​        我们可以在@vue/cli/package.json里找到入口文件位置。
 
-![image-20240413163634836](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163634836.png)
+![image](./images/VueCLILearning-2.png)
 
 ​    vue create命令的入口在@vue/cli/bin/vue.js中。可以看到，里面注册了create、add、ui等命令，vue使用commander库定义命令的配置项，并在配置中指明命令的执行文件。
 
-![image-20240413163640374](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163640374.png)
+![image](./images/VueCLILearning-3.png)
 
 ​       @vue/cli/bin/vue.js文件的执行流程：
 
@@ -136,7 +136,7 @@ vue create my-project
 - ②定义所有 vue 命令;
 - ③解析 shell 命令，并根据命令执行路径执行命令；
 
-![image-20240413163646259](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163646259.png)
+![image](./images/VueCLILearning-4.png)
 
 ​        vue create命令支持一些参数配置，可以通过vue create --help获取详细的文档。
 
@@ -162,31 +162,31 @@ vue create my-project
 
 ​        执行vue create命令时会加载cli/lib/create.js中的create函数。比较重要的是name和targetDir这两个，接下来执行函数validateProjectName利用npm包validate-npm-package-name 判断项目名称是否符合npm包名规范，并输出相应的errors或者warnings。
 
-![image-20240413163652771](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163652771.png)
+![image](./images/VueCLILearning-5.png)
 
 ​        在验证包名之后，会判断项目目录是否与当前已有目录重复。就是判断target目录是否存在，然后通过交互询问用户是否覆盖(对应的是操作是删除原目录)。
 
-![image-20240413163657199](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163657199.png)
+![image](./images/VueCLILearning-6.png)
 
 ## Creator类
 
 ​        在基础验证完成以后会创建一个Creator实例。
 
-![image-20240413163702405](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163702405.png)
+![image](./images/VueCLILearning-7.png)
 
 ​        在创建一个Creator实例后，然后调用了create方法
 
-![image-20240413163706034](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163706034.png)
+![image](./images/VueCLILearning-8.png)
 
 ### constructor 构造函数
 
 ​       看一下Creator类的构造函数，主要将逻辑封装在resolveIntroPrompts/resolveOutroPrompts和PromptModuleAPI这几个方法中 。下面开始看一下初始化Creator实例发生了什么。
 
-![image-20240413163712162](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163712162.png)
+![image](./images/VueCLILearning-9.png)
 
 ​       主要看一下PromptModuleAPI这个类是干什么的。
 
-![image-20240413163716668](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163716668.png)
+![image](./images/VueCLILearning-10.png)
 
 - PromptModuleAPI实例会先调用它的实例方法。
 - 然后将injectFeature、injectPrompt、injectOptionForPrompt、onPromptComplete保存到 Creator实例对应的变量中。
@@ -197,7 +197,7 @@ vue create my-project
 
 ​      vue-cli-preset：一个Vue CLI preset是一个包含创建新项目所需预定义选项和插件的JSON对象，让用户无需在命令提示中选择它们。
 
-![image-20240413163722799](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163722799.png)
+![image](./images/VueCLILearning-11.png)
 
 ​        promptModules返回的是所有用于终端交互的模块，其中会调用injectFeature和injectPrompt来将交互配置插入进去，并且会通过onPromptComplete注册一个回调。onPromptComplete注册回调的形式是往promptCompleteCbs这个数组中push了传入的方法，在所有交互完成之后调用回调。
 
@@ -244,11 +244,11 @@ creator.on('creation', onCreationEvent); 著作权归「玩相机的程序员-ax
 
 ​       preset预设参数初始化：Preset是一个包含创建新项目所需预定义选项和插件的JSON对象，让用户无需在命令提示中选择它们。
 
-![image-20240413163732338](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163732338.png)
+![image](./images/VueCLILearning-12.png)
 
-![image-20240413163735261](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163735261.png)
+![image](./images/VueCLILearning-13.png)
 
-![image-20240413163738694](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163738694.png)
+![image](./images/VueCLILearning-14.png)
 
 ​        CLI中允许使用本地的preset和远程的preset。
 
@@ -256,33 +256,33 @@ creator.on('creation', onCreationEvent); 著作权归「玩相机的程序员-ax
 
 ​         按照字面意思，这个方法获取了一系列用于和用户交互的模块，返回了一个数组。获取了babel，typescript，pwa，router，vuex，cssPreprocessors，linter，unit，e2e的Prompt的配置信息。
 
-![image-20240413163744106](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163744106.png)
+![image](./images/VueCLILearning-15.png)
 
-![image-20240413163746812](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163746812.png)
+![image](./images/VueCLILearning-16.png)
 
-![image-20240413163749820](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163749820.png)
+![image](./images/VueCLILearning-17.png)
 
 ​       这些模块的代码格式基本都是统一的。以 unit 为例：
 
-![image-20240413163755177](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163755177.png)
+![image](./images/VueCLILearning-18.png)
 
 ​      cli.injectFeature：用户交互的一些配置选项，注入featurePrompt，即初始化项目时选择babel，typescript，pwa等等。
 
-![image-20240413163801228](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163801228.png)
+![image](./images/VueCLILearning-319.png)
 
 ​       cli.injectPrompt：根据选择的featurePrompt然后注入对应的prompt。
 
-![image-20240413163806634](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163806634.png)
+![image](./images/VueCLILearning-20.png)
 
 ​       cli.onPromptComplete：就是一个回调方法，在完成交互后执行，会根据选择来添加对应的插件，当选择了mocha，那么就会添加 @vue/cli-plugin-unit-mocha 插件。
 
-![image-20240413163812157](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163812157.png)
+![image](./images/VueCLILearning-21.png)
 
 ### getPreset 获取预设
 
 ​        在基础验证完成以后会创建一个Creator实例，然后调用实例方法create，创建项目的核心方法在Creator.create()中，最开始是获取preset预设参数初始化。
 
-![image-20240413163816886](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163816886.png)
+![image](./images/VueCLILearning-22.png)
 
 ​        先判断 vue create 命令是否带有-p选项，如果有的话会调用resolvePreset去解析preset。
 
@@ -296,11 +296,11 @@ creator.on('creation', onCreationEvent); 著作权归「玩相机的程序员-ax
 
 ​       this.resolveFinalPrompts()：就是将在Creator的构造函数里初始化的那些prompts合到一起了。 
 
-![image-20240413163827188](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163827188.png)
+![image](./images/VueCLILearning-23.png)
 
    inquirer.prompt执行完后返回answers，若选择本地保存的preset或default，则调用resolvePreset进行解析preset，否则遍历promptCompleteCbs执行injectFeature和injectPrompt的回调。
 
-![image-20240413163831492](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163831492.png)
+![image](./images/VueCLILearning-24.png)
 
 ### 自定义配置加载
 
@@ -319,7 +319,7 @@ creator.on('creation', onCreationEvent); 著作权归「玩相机的程序员-ax
 
 ​        在调用savePreset之前还会对预设进行解析、校验等，来看一下savePreset方法： 
 
-![image-20240413163839288](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163839288.png)
+![image](./images/VueCLILearning-25.png)
 
 > Creator.create()方法主要执行项目的参数初始化、包管理初始化、npm初始化、仓库初始化，通过Generator生成项目文件并安装项目依赖。
 
@@ -329,34 +329,34 @@ creator.on('creation', onCreationEvent); 著作权归「玩相机的程序员-ax
 
 ​        生成项目文件(解析插件对象并创建生成器实例生成项目文件)：在安装完依赖以后，就会调用resolvePlugins，作用就是加载每个插件的generator，并且如果插件需要进行命令行交互的话会执行inquirer.prompt获取option。 在此之后会实例化一个Generator。
 
-![image-20240413163844248](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163844248.png)
+![image](./images/VueCLILearning-26.png)
 
 ​        在实例化一个Generator的时候会初始化一些成员变量，最重要的就是调用插件的generators，Vue-cli3.0采用了一套基于插件的架构，到这里就会交给各个插件去执行了。Generator实例化代码：
 
-![image-20240413163848178](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163848178.png)
+![image](./images/VueCLILearning-27.png)
 
 ### 初始化插件 
 
 ​     实例化Generator后，就会调用实例的generate方法，此时就差不多进入到了生成项目文件的阶段。大致可分为三部分，extractConfigFiles(提取配置文件)， resolveFiles(模板渲染)和 writeFileTree(在磁盘上生成文件)。在generate方法中，最先执行的是initPlugins方法。
 
-![image-20240413163852149](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163852149.png)
+![image](./images/VueCLILearning-28.png)
 
-![image-20240413163857192](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163857192.png)
+![image](./images/VueCLILearning-29.png)
 
-![image-20240413163901534](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163901534.png)
+![image](./images/VueCLILearning-30.png)
 
-![image-20240413163907553](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163907553.png)
+![image](./images/VueCLILearning-31.png)
 
 - 加载cli-service 核心插件：会执行 @vue/cli-service/generator/index.js 目录。
 - 加载cli-plugin-xxx/扩展插件：会加载对应cli-plugin-xxx/generator.js插件的generator方法。
 
 ​      比如加载@vue/cli-plugin-babel插件的 @vue/cli-plugin-babel/generator.js：会在当前项目的 ./node_modules/@vue/cli-plugin-babel/ 目录下加载generator.js文件。
 
-![image-20240413163913620](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163913620.png)
+![image](./images/VueCLILearning-32.png)
 
 ​        这里的api就是一个GeneratorAPI实例，这里用到了一个extendPackage方法，通过该方法加载cli-plugin-babel后，默认的package.json就变成：
 
-![image-20240413163919023](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163919023.png)
+![image](./images/VueCLILearning-33.png)
 
 ### GeneratorAPI
 
@@ -382,9 +382,9 @@ creator.on('creation', onCreationEvent); 著作权归「玩相机的程序员-ax
 
 ​     根据插件依赖生成package.json文件： 可以利用GeneratorAPI的extendPackage方法向package.json文件里面注入自定义内容，拓展配置。如scripts，eslintConfig以及devDependencies字段，另外也会根据选择的eslint模式添加对应的依赖和修改对应的配置文件。
 
-![image-20240413163927488](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163927488.png)
+![image](./images/VueCLILearning-34.png)
 
-![image-20240413163931271](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163931271.png)
+![image](./images/VueCLILearning-35.png)
 
 ### extractConfigFiles 
 
@@ -392,7 +392,7 @@ creator.on('creation', onCreationEvent); 著作权归「玩相机的程序员-ax
 
 ​       下面以eslint为例进行分析：在初始化项目的时候，如果选择了eslint插件，在调用@vue/cli-plugin-eslint的generator的时候，就会向package.json注入eslintConfig字段。
 
-![image-20240413163935630](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163935630.png)
+![image](./images/VueCLILearning-36.png)
 
 ### resolveFiles
 
@@ -408,17 +408,17 @@ creator.on('creation', onCreationEvent); 著作权归「玩相机的程序员-ax
 
 ​      提取了配置文件和模板渲染后调用sortPkg对package.json的字段进行了排序并将package.json转化为json字符串添加到项目的files中。 此时整个项目的文件已经在内存中生成好了(在源码中就是对应的this.files)，接下来就调用writeFileTree方法将内存中的字符串模板文件生成在磁盘中。
 
-![image-20240413163942948](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163942948.png)
+![image](./images/VueCLILearning-37.png)
 
-![image-20240413163946723](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163946723.png)
+![image](./images/VueCLILearning-38.png)
 
-![image-20240413163950675](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163950675.png)
+![image](./images/VueCLILearning-39.png)
 
-![image-20240413163954344](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163954344.png)
+![image](./images/VueCLILearning-40.png)
 
 ## installDeps依赖安装
 
-![image-20240413163958571](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413163958571.png)
+![image](./images/VueCLILearning-41.png)
 
 ​        getVersions 的代码不多，看下比较核心的代码：
 
@@ -645,17 +645,17 @@ if (config && config !== 'base') {
 
 ​        将template目录下的文件通过render渲染到内存中，这里用的是ejs作为模板渲染引擎。通过GeneratorAPI提供的实例方法，可以在插件中非常方便地对项目进行修改和自定义。
 
-![image-20240413164021049](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413164021049.png)
+![image](./images/VueCLILearning-42.png)
 
 ### 写package.json
 
-![image-20240413164025738](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413164025738.png)
+![image](./images/VueCLILearning-43.png)
 
-![image-20240413164030625](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413164030625.png)
+![image](./images/VueCLILearning-44.png)
 
 ### 调用router插件和vuex插件
 
-![image-20240413164035496](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413164035496.png)
+![image](./images/VueCLILearning-45.png)
 
 ## 使用命令
 
@@ -663,9 +663,9 @@ if (config && config !== 'base') {
 
 ​        这是使用默认preset的项目的package.json。可以通过npm或Yarn调用这些script。
 
-![image-20240413164039089](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413164039089.png)
+![image](./images/VueCLILearning-46.png)
 
-![image-20240413164042758](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413164042758.png)
+![image](./images/VueCLILearning-47.png)
 
 ## vue-cli-service serve
 
@@ -729,9 +729,9 @@ if (config && config !== 'base') {
 
 ​         在vue.config.js中的configureWebpack选项提供一个对象：
 
-![image-20240413164049623](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413164049623.png)
+![image](./images/VueCLILearning-48.png)
 
-![image-20240413164053172](C:\Users\陈冰仪191541102\AppData\Roaming\Typora\typora-user-images\image-20240413164053172.png)
+![image](./images/VueCLILearning-49.png)
 
 ## 链式操作 (高级)
 
