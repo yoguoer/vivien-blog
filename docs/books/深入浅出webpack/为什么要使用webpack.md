@@ -48,19 +48,19 @@ tags:       # 标签
 
 ​        Webpack会分析所有资源文件，建立所有资源文件之间的依赖关系，构建依赖树，然后根据依赖树渲染出每一个模块。每一个模块都会被编译成机器能够理解的格式，比如JavaScript代码会被编译成浏览器能够识别的JavaScript代码，CSS代码会被编译成浏览器能够识别的CSS代码，图片会被压缩成更小的格式。之后，Webpack会将所有编译完成的模块按照它们之间的依赖关系组合成一个单独的文件，这个文件就是我们所说的“bundle”，最后将bundle文件发布到网站上，完成打包处理。
 
-![img](http://www.kdocs.cn/api/v3/office/copy/aW1hemVqci9aRGJWRFBlU0NiRkhZY3BlS3hsR0wybEpIRFBBTlB0UGpWZ3hQWEVnM3lqak16c1Y4eXR0K2tqcEdpenRiNjdyRy93Nno2QjVjMWZObjAyeDZKQ3ZOcXozdmdjcTlidUYrWmttaEdNdG1OMEJnN3dhbW9yaER4cm5hOGw5NHVGODV2TklOSGh5SUZET0JjRHp2RUFDMll4cEJVcUZZTTdYckxOSFVRcmtDeXJBbncvSit1MWhKUFRLM3Y3QnNrT2hhUVN3VWdVT3BzYlRBVCtGR2s0Sm5GRUNmblFNeEYxZjk1K0IxZ2tSeW0xNkFZdDNnT2NlZ0dSMHZMR3FjRWJXczlBPQ==/attach/object/ZQHLABIBWA?)
+![img](./images/WebpackBook-1.png)
 
 ## 流程概括
 
 ​        Webpack 的运行流程是一个串行的过程，从启动到结束会依次执行以下流程：
 
-![img](http://www.kdocs.cn/api/v3/office/copy/aW1hemVqci9aRGJWRFBlU0NiRkhZY3BlS3hsR0wybEpIRFBBTlB0UGpWZ3hQWEVnM3lqak16c1Y4eXR0K2tqcEdpenRiNjdyRy93Nno2QjVjMWZObjAyeDZKQ3ZOcXozdmdjcTlidUYrWmttaEdNdG1OMEJnN3dhbW9yaER4cm5hOGw5NHVGODV2TklOSGh5SUZET0JjRHp2RUFDMll4cEJVcUZZTTdYckxOSFVRcmtDeXJBbncvSit1MWhKUFRLM3Y3QnNrT2hhUVN3VWdVT3BzYlRBVCtGR2s0Sm5GRUNmblFNeEYxZjk1K0IxZ2tSeW0xNkFZdDNnT2NlZ0dSMHZMR3FjRWJXczlBPQ==/attach/object/CDGK4BIAEU?)
+![img](./images/WebpackBook-2.png)
 
 ​        在以上过程中，Webpack 会在特定的时间点广播出特定的事件，插件在监听到感兴趣的事件后会执行特定的逻辑，并且插件可以调用 Webpack 提供的 API 改变 Webpack 的运行结果。
 
-![img](http://www.kdocs.cn/api/v3/office/copy/aW1hemVqci9aRGJWRFBlU0NiRkhZY3BlS3hsR0wybEpIRFBBTlB0UGpWZ3hQWEVnM3lqak16c1Y4eXR0K2tqcEdpenRiNjdyRy93Nno2QjVjMWZObjAyeDZKQ3ZOcXozdmdjcTlidUYrWmttaEdNdG1OMEJnN3dhbW9yaER4cm5hOGw5NHVGODV2TklOSGh5SUZET0JjRHp2RUFDMll4cEJVcUZZTTdYckxOSFVRcmtDeXJBbncvSit1MWhKUFRLM3Y3QnNrT2hhUVN3VWdVT3BzYlRBVCtGR2s0Sm5GRUNmblFNeEYxZjk1K0IxZ2tSeW0xNkFZdDNnT2NlZ0dSMHZMR3FjRWJXczlBPQ==/attach/object/TN424BIATM?)
+![img](./images/WebpackBook-3.png)
 
-![img](http://www.kdocs.cn/api/v3/office/copy/aW1hemVqci9aRGJWRFBlU0NiRkhZY3BlS3hsR0wybEpIRFBBTlB0UGpWZ3hQWEVnM3lqak16c1Y4eXR0K2tqcEdpenRiNjdyRy93Nno2QjVjMWZObjAyeDZKQ3ZOcXozdmdjcTlidUYrWmttaEdNdG1OMEJnN3dhbW9yaER4cm5hOGw5NHVGODV2TklOSGh5SUZET0JjRHp2RUFDMll4cEJVcUZZTTdYckxOSFVRcmtDeXJBbncvSit1MWhKUFRLM3Y3QnNrT2hhUVN3VWdVT3BzYlRBVCtGR2s0Sm5GRUNmblFNeEYxZjk1K0IxZ2tSeW0xNkFZdDNnT2NlZ0dSMHZMR3FjRWJXczlBPQ==/attach/object/UJ4K4BIAIY?)
+![img](./images/WebpackBook-4.png)
 
 
 

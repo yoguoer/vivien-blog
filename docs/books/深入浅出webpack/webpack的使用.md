@@ -112,7 +112,7 @@ Webpack 是基于 Node.js 运行的，所以采用 Common.js 模块化规范
 
 ## loader
 
-![img](http://www.kdocs.cn/api/v3/office/copy/aW1hemVqci9aRGJWRFBlU0NiRkhZY3BlS3hsR0wybEpIRFBBTlB0UGpWZ3hQWEVnM3lqak16c1Y4eXR0K2tqcEdpenRiNjdyRy93Nno2QjVjMWZObjAyeDZKQ3ZOcXozdmdjcTlidUYrWmttaEdNdG1OMEJnN3dhbW9yaER4cm5hOGw5NHVGODV2TklOSGh5SUZET0JjRHp2RUFDMll4cEJVcUZZTTdYckxOSFVRcmtDeXJBbncvSit1MWhKUFRLM3Y3QnNrT2hhUVN3VWdVT3BzYlRBVCtGR2s0Sm5GRUNmblFNeEYxZjk1K0IxZ2tSeW0xNkFZdDNnT2NlZ0dSMHZMR3FjRWJXczlBPQ==/attach/object/YH2K6BIANI?)
+![img](./images/WebpackBook-5.png)
 
 - 条件匹配：通过 test 、 include 、 exclude 三个配置项来命中Loader要应用规则的文件。
   - test 属性，识别出哪些文件会被转换。
@@ -431,7 +431,7 @@ module.exports = {
 
 ## 优化和生产配置
 
-![img](http://www.kdocs.cn/api/v3/office/copy/aW1hemVqci9aRGJWRFBlU0NiRkhZY3BlS3hsR0wybEpIRFBBTlB0UGpWZ3hQWEVnM3lqak16c1Y4eXR0K2tqcEdpenRiNjdyRy93Nno2QjVjMWZObjAyeDZKQ3ZOcXozdmdjcTlidUYrWmttaEdNdG1OMEJnN3dhbW9yaER4cm5hOGw5NHVGODV2TklOSGh5SUZET0JjRHp2RUFDMll4cEJVcUZZTTdYckxOSFVRcmtDeXJBbncvSit1MWhKUFRLM3Y3QnNrT2hhUVN3VWdVT3BzYlRBVCtGR2s0Sm5GRUNmblFNeEYxZjk1K0IxZ2tSeW0xNkFZdDNnT2NlZ0dSMHZMR3FjRWJXczlBPQ==/attach/object/VJWLWBIAZM?)
+![img](./images/WebpackBook-6.png)
 
 ### resolve
 
@@ -709,7 +709,7 @@ SplitChunksPlugin可以将公共的依赖模块提取到已有的入口 chunk �
 
 
 
-![img](http://www.kdocs.cn/api/v3/office/copy/aW1hemVqci9aRGJWRFBlU0NiRkhZY3BlS3hsR0wybEpIRFBBTlB0UGpWZ3hQWEVnM3lqak16c1Y4eXR0K2tqcEdpenRiNjdyRy93Nno2QjVjMWZObjAyeDZKQ3ZOcXozdmdjcTlidUYrWmttaEdNdG1OMEJnN3dhbW9yaER4cm5hOGw5NHVGODV2TklOSGh5SUZET0JjRHp2RUFDMll4cEJVcUZZTTdYckxOSFVRcmtDeXJBbncvSit1MWhKUFRLM3Y3QnNrT2hhUVN3VWdVT3BzYlRBVCtGR2s0Sm5GRUNmblFNeEYxZjk1K0IxZ2tSeW0xNkFZdDNnT2NlZ0dSMHZMR3FjRWJXczlBPQ==/attach/object/HFJK4BIAHA?)
+![img](./images/WebpackBook-7.png)
 
 ​        Webpack 内置了专门用于提取多个 Chunk 中公共部分的插件 CommonsChunkPlugin，CommonsChunkPlugin 大致使用方法如下：
 
