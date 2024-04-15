@@ -268,7 +268,7 @@ creator.on('creation', onCreationEvent); 著作权归「玩相机的程序员-ax
 
 ​      cli.injectFeature：用户交互的一些配置选项，注入featurePrompt，即初始化项目时选择babel，typescript，pwa等等。
 
-![image](./images/VueCLILearning-319.png)
+![image](./images/VueCLILearning-19.png)
 
 ​       cli.injectPrompt：根据选择的featurePrompt然后注入对应的prompt。
 
