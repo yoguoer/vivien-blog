@@ -14,15 +14,15 @@ tags:       # 标签
 >
 > 前置：后端接口返回的数据是这样的：
 > 
-> ![img](./images/Vue2响应式原理-1.png)
+> ![img](./images/V2responsivenessPrinciple-1.png)
 > 
 > ①首先在store中取出后端返回的数据A=res.data，在这里打印输出是正常的
 >
-> ![img](./images/Vue2响应式原理-2.png)
+> ![img](./images/V2responsivenessPrinciple-2.png)
 >
 > ②然后在vue页面上再取出A.data也就是res.data.data，以及其它几个字段即res.data.XXX，在这里打印输出是空白的
 >
-> ![img](./images/Vue2响应式原理-3.png)
+> ![img](./images/V2responsivenessPrinciple-3.png)
 >
 > ③结果在图表页中取出的一直是undefined（读取属性不存在），但是第一次加载不出来，再刷新一下却又能拿到数据了。
 >
@@ -32,7 +32,7 @@ tags:       # 标签
 >
 > 在定义data/computed的时候，就先对A的所有属性进行枚举，需要用到后端data里的哪一层就枚举几层，于是就没问题了！
 >
-> ![img](./images/Vue2响应式原理-4.png)
+> ![img](./images/V2responsivenessPrinciple-4.png)
 >
 > **不仅仅是这个地方，在其他地方也能遇到这种bug！！！比如在展示一块信息的时候，已经写好了遍历，根据后端返回的字段自己去渲染，但是，如果不在data里面把每一个字段都枚举一下，就会导致在表单进行编辑修改的时候，数据明明数据变化了可是视图没有更新，于是乎，后端每次新增一个字段，前端也需要在枚举中增加一个字段才行。**
 
@@ -48,7 +48,7 @@ tags:       # 标签
 
 ​    **每个组件实例会有相应的`watcher`实例，会在组件渲染的过程中记录依赖的所有数据属性（进行依赖收集，还有`computed watcher`、`user watcher`实例），之后依赖项被改动时，`setter`方法会通知依赖于此`data`的`watcher`实例重新计算（派发更新），从而使它关联的组件重新渲染。**
 
-![img](./images/Vue2响应式原理-5.png)
+![img](./images/V2responsivenessPrinciple-5.png)
 
 - 在`init`数据初始化的时候，对象内部通过 `defineReactive` 方法，使用 `Object.defineProperty` 将属性进行劫持（这时候只会劫持**已经存在的属性**）。如果数据是数组类型， Vue2中是通过重写数组方法来实现。多层对象是通过递归来实现劫持的。
 - 在初始化流程中的编译阶段，当`render function` 被渲染的时候，会读取Vue实例中和视图相关的响应式数据，此时会触发 `getter` 函数进行 **依赖收集**（将观察者`Watcher`对象存放到当前闭包的订阅者`Dep`的`subs`中）。
@@ -56,7 +56,7 @@ tags:       # 标签
 
 ## 关键角色
 
-![img](./images/Vue2响应式原理-6.png)
+![img](./images/V2responsivenessPrinciple-6.png)
 
 如上图所示：一个属性可能有多个依赖，每个响应式数据都有一个`Dep`来管理它的依赖。
 
@@ -71,7 +71,7 @@ tags:       # 标签
 >
 > ​    由于 Object.defineProperty 无法监听对象的变化，所以 Vue2 中设置了一个 Observer 类来管理对象的响应式依赖，同时也会递归侦测对象中子数据的变化。
 >
-> ![img](./images/Vue2响应式原理-7.png)
+> ![img](./images/V2responsivenessPrinciple-7.png)
 ### Dep
 
 - 相当于一个管家，负责添加或删除相关的依赖和通知相关的依赖进行相关操作。
@@ -85,7 +85,7 @@ tags:       # 标签
 > 1. **当读取响应式对象的某个属性时，它会进行依赖收集：有人用到了我**
 > 2. **当改变某个属性时，它会派发更新：那些用我的人听好了，我变了**
 >
-> ![img](./images/Vue2响应式原理-8.png)
+> ![img](./images/V2responsivenessPrinciple-8.png)
 
 ### Watcher
 
@@ -226,5 +226,5 @@ vue.mount(); // in get
 vue._data.text = '123'; // in watcher update /n in get
 ```
 
-![img](./images/Vue2响应式原理-9.png)
-![img](./images/Vue2响应式原理-10.png)
+![img](./images/V2responsivenessPrinciple-9.png)
+![img](./images/V2responsivenessPrinciple-10.png)

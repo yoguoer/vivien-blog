@@ -357,7 +357,12 @@ module.exports = {
         },
       ]
     },
-
+    markdown: {
+      // ......
+      extendMarkdown: md => {
+        md.use(require("markdown-it-disable-url-encode"));
+      }
+    },
     // 插件
     plugins: [
       ["@vuepress-reco/vuepress-plugin-back-to-top"], // 回到顶部小火箭插件
