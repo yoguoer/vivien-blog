@@ -59,6 +59,10 @@ module.exports = {
               {
                 text: "webpack执行流程",
                 link: "/note/学习笔记/webpack执行流程/",
+              },
+              {
+                text: "权限控制",
+                link: "/note/学习笔记/权限控制/",
               }
             ]
           },
@@ -341,6 +345,10 @@ module.exports = {
             {
               title: "webpack执行流程",
               path: "/note/学习笔记/webpack执行流程",
+            },
+            {
+              title: "权限控制",
+              path: "/note/学习笔记/权限控制",
             },
           ]
         },
