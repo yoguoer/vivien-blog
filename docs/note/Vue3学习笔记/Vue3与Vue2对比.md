@@ -16,6 +16,8 @@ tags:       # 标签
 
 更友好：vue3在兼顾Vue2的options API的同时还推出了composition API，大大增加了代码的逻辑组织和代码复用能力。
 
+![img](./images/bb04ceaf5f044d308100e2bf0447f8cctplv-k3u1fbpfcp-jj-mark3024000q75.webp)
+
 ## 相关信息简介
 
 2020年9月18日，Vue.js发布3.0版本，代号：One Piece（海贼王）

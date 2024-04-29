@@ -53,26 +53,30 @@ module.exports = {
                 link: "/note/Vue3学习笔记/Vue3与Vue2对比/",
               },
               {
-                text: "VueCLI学习笔记",
-                link: "/note/学习笔记/VueCLI学习笔记/",
-              },
-              {
-                text: "webpack执行流程",
-                link: "/note/学习笔记/webpack执行流程/",
+                text: "React学习笔记",
+                link: "/note/React学习笔记/React基础知识/",
               },
               {
                 text: "权限控制",
                 link: "/note/学习笔记/权限控制/",
-              }
+              },
             ]
           },
           {
-            text: "踩坑笔记",
+            text: "原理学习",
             items: [
               {
                 text: "Vue2响应式原理",
-                link: "/note/踩坑笔记/Vue2响应式原理/",
-              }
+                link: "/note/原理学习/Vue2响应式原理/",
+              },
+              {
+                text: "VueCLI学习笔记",
+                link: "/note/原理学习/VueCLI学习笔记/",
+              },
+              {
+                text: "webpack执行流程",
+                link: "/note/原理学习/webpack执行流程/",
+              },
             ]
           },
         ],
@@ -94,6 +98,15 @@ module.exports = {
             link: "/books/TypeScript教程/简介和基本用法/",
           },
         ],
+      },
+      {
+        text: "项目实践",
+        items: [
+          {
+            text: "系统权限控制插件",
+            link: "/project/权限控制/系统权限控制插件/",
+          }
+        ]
       },
       { text: "TimeLine", link: "/timeline/", icon: "reco-date" },
       { text: "留言板", link: "/messageBoard/messageBoard", icon: "reco-tag" },
@@ -334,18 +347,21 @@ module.exports = {
           ],
         },
         {
-          title: "学习笔记",
+          title: "React学习笔记",
           collapsable: true,
           sidebarDepth: 2, // 缩放子级别名称
           children: [
             {
-              title: "VueCLI学习笔记",
-              path: "/note/学习笔记/VueCLI学习笔记",
-            },
-            {
-              title: "webpack执行流程",
-              path: "/note/学习笔记/webpack执行流程",
-            },
+              title: "React基础知识",
+              path: "/note/React学习笔记/React基础知识",
+            }
+          ]
+        },
+        {
+          title: "学习笔记",
+          collapsable: true,
+          sidebarDepth: 2, // 缩放子级别名称
+          children: [
             {
               title: "权限控制",
               path: "/note/学习笔记/权限控制",
@@ -353,17 +369,38 @@ module.exports = {
           ]
         },
         {
-          title: "踩坑笔记",
+          title: "原理学习",
           collapsable: true,
           sidebarDepth: 2, // 缩放子级别名称
           children: [
             {
               title: "Vue2响应式原理",
-              path: "/note/踩坑笔记/Vue2响应式原理",
+              path: "/note/原理学习/Vue2响应式原理",
+            },
+            {
+              title: "VueCLI学习笔记",
+              path: "/note/原理学习/VueCLI学习笔记",
+            },
+            {
+              title: "webpack执行流程",
+              path: "/note/原理学习/webpack执行流程",
             },
           ]
         },
-      ]
+      ],
+      '/project/': [
+        {
+          title: "项目实践",
+          collapsable: true,
+          sidebarDepth: 2, // 缩放子级别名称
+          children: [
+            {
+              title: "系统权限控制插件",
+              path: "/project/权限控制/系统权限控制插件",
+            },
+          ]
+        },
+       ]
     },
     markdown: {
       // ......
