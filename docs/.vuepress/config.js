@@ -100,7 +100,7 @@ module.exports = {
         ],
       },
       {
-        text: "项目实践",
+        text: "实践总结",
         items: [
           {
             text: "系统权限控制插件",
@@ -390,7 +390,7 @@ module.exports = {
       ],
       '/project/': [
         {
-          title: "项目实践",
+          title: "实践总结",
           collapsable: true,
           sidebarDepth: 2, // 缩放子级别名称
           children: [
