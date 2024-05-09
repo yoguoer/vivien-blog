@@ -50,7 +50,7 @@ tags:       # 标签
 
 ​         在JSX语法中，可以在大括号内放置任何有效的JavaScript表达式。
 
-```react
+```JavaScript
 const name = 'Josh Perez';const element = <h1>Hello, {name}</h1>;
 ReactDOM.render(
   element,
@@ -64,7 +64,7 @@ ReactDOM.render(
 
 ​       也就是说，可以在if语句和for循环的代码块中使用JSX，将JSX赋值给变量，把JSX当作参数传入，以及从函数中返回JSX。
 
-```react
+```JavaScript
 function getGreeting(user) {
   if (user) {
     return <h1>Hello, {formatName(user)}!</h1>;  }
@@ -79,7 +79,7 @@ function getGreeting(user) {
 > 	仅使用引号(对于字符串值)或大括号(对于表达式)中的一个，对于同一属性不能同时使用这两种符号。
 > 因为JSX语法上更接近JavaScript而不是HTML，所以React DOM使用camelCase(小驼峰命名)来定义属性的名称，而不使用HTML属性名称的命名约定。
 
-```react
+```JavaScript
 const element = <div tabIndex="0"></div>; //引号，将属性值指定为字符串字面量
 const element = <img src={user.avatarUrl}></img>; // 大括号，在属性值中插入JS表达式
 ```
@@ -88,7 +88,7 @@ const element = <img src={user.avatarUrl}></img>; // 大括号，在属性值中
 
 ​        假如一个标签里面没有内容，可以使用 /> 来闭合标签，就像XML语法一样。JSX标签里能够包含很多子元素。
 
-```react
+```JavaScript
 const element = <img src={user.avatarUrl} />;
 const element = (
   <div>
@@ -102,7 +102,7 @@ const element = (
 
 ​        React DOM在渲染所有输入内容之前，默认会进行转义。它可以确保在应用中，永远不会注入那些并非自己明确编写的内容。所有的内容在渲染之前都被转换成了字符串。可以有效地防止XSS(cross-site-scripting, 跨站脚本)攻击。
 
-```react
+```JavaScript
 const title = response.potentiallyMaliciousInput; //可安全地在JSX中插入用户输入内容
 const element = <h1>{title}</h1>; //直接使用是安全的
 ```
@@ -111,7 +111,7 @@ const element = <h1>{title}</h1>; //直接使用是安全的
 
 ​        Babel会把JSX转译成一个名为React.createElement()函数调用。
 
-```react
+```JavaScript
 // 以下两种示例代码完全等效
 const element = (
   <h1 className="greeting">
@@ -127,7 +127,7 @@ const element = React.createElement(
 
 ​        React.createElement()会预先执行一些检查，以帮助你编写无错代码，但实际上它创建了一个这样的对象。这些对象被称为React元素，它们描述了你希望在屏幕上看到的内容。React通过读取这些对象，然后使用它们来构建DOM以及保持随时更新。
 
-```react
+```JavaScript
 // 注意：这是简化过的结构
 const element = {
   type: 'h1',
@@ -148,7 +148,7 @@ const element = {
 
 ​        想要将一个React元素渲染到根DOM节点中，只需把它们一起传入ReactDOM.render()：
 
-```react
+```JavaScript
 const element = <h1>Hello, world</h1>;
 ReactDOM.render(element, document.getElementById('root'));
 ```
@@ -157,7 +157,7 @@ ReactDOM.render(element, document.getElementById('root'));
 
 ​        React元素是不可变对象。一旦被创建，就无法更改它的子元素或者属性。一个元素就像电影的单帧：它代表了某个特定时刻的UI。根据我们已有的知识，更新UI唯一的方式是创建一个全新的元素，并将其传入ReactDOM.render()。
 
-```react
+```JavaScript
 function tick() {
   const element = (
     <div>
@@ -205,7 +205,7 @@ setInterval(tick, 1000);
 
 ​        还可以使用ES6的class来定义组件。
 
-```react
+```JavaScript
 // 以下两个组件在 React 里是等效的
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
@@ -223,7 +223,7 @@ class Welcome extends React.Component {
 
 > 组件名称必须以大写字母开头。React会将以小写字母开头的组件视为原生DOM标签。
 
-```react
+```JavaScript
 function Welcome(props) {  return <h1>Hello, {props.name}</h1>;   }
 const element = <Welcome name="Sara" />;ReactDOM.render(
   element,
@@ -269,7 +269,7 @@ const element = <Welcome name="Sara" />;ReactDOM.render(
 
   - Number、String、Boolean、Null、Undefined 是不可变类型，由于其本身就是不可变的，要修改状态时，直接赋新值即可
 
-  - ```react
+  - ```JavaScript
     this.setState({
       number: 1,
       string: 'hello',
@@ -281,7 +281,7 @@ const element = <Welcome name="Sara" />;ReactDOM.render(
 
   - 数组类型是可变类型。假如有一个数组类型的State需要新增一个数组元素，应使用数组的`concat`方法或ES6的数组扩展语法
 
-  - ```react
+  - ```JavaScript
     // 方法一：将 state 先赋值给另外的变量，然后使用 concat 创建新数组
     let students = this.state.students;
     this.setState({
@@ -305,7 +305,7 @@ const element = <Welcome name="Sara" />;ReactDOM.render(
 
   - 对象是可变类型，修改对象类型的`state`时，应该**保证不会修改原来的**`state`。可以使用ES6的`Object.assign`方法或者对象扩展语法
 
-  - ```react
+  - ```JavaScript
     // Obejct.assign() 方法
     this.setState(preState => {
         school: Obejct.assign({}, preState.school, {classNum: 10})
