@@ -42,9 +42,9 @@ tags:       # 标签
 > - 属性 `props`
 > - 子元素 `children`
 
-![img](images/WM3QMNAYACACC.png)
+![img](./images/WM3QMNAYACACC.png)
 
-![img](images/OY5ASNAYAAAFY.png)
+![img](./images/OY5ASNAYAAAFY.png)
 
 ### 在 JSX 中嵌入表达式
 
@@ -243,7 +243,7 @@ const element = <Welcome name="Sara" />;ReactDOM.render(
 
 ​	Props是一个从外部传入组件的参数，主要用于从父组件向子组件传递数据。它具有只读性和不可变性，组件内部无法控制也无法修改。除非外部组件主动传入新的Props来更新，否则组件的Props永远保持不变。
 
-![image-20240428151921003](images/image-20240428151921003.png)
+![image-20240428151921003](./images/image-20240428151921003.png)
 
 ### 只读性/不可变性
 
@@ -350,7 +350,7 @@ const element = <Welcome name="Sara" />;ReactDOM.render(
 
 - 发生在组件从DOM中移除时，在这个阶段，会调用一些特定的生命周期方法，以便组件可以进行必要的清理工作。
 
-![img](images/TE6DCNIYAAQD4.jpeg)
+![img](./images/TE6DCNIYAAQD4.jpeg)
 
 ## 组件挂载器
 
@@ -374,7 +374,7 @@ const element = <Welcome name="Sara" />;ReactDOM.render(
 >
 > 目前会返回一个引用，指向ReactComponent的根实例。但这个返回值是历史遗留，应避免使用。因为未来版本的React可能会在某些情况下进行异步渲染。如果真的需要一个指向ReactComponent的根实例的引用，推荐的方法是添加一个callback到根元素上。
 >
-> ![image-20240506112444147](images/image-20240506112444147.png)
+> ![image-20240506112444147](./images/image-20240506112444147.png)
 
 ## 事件处理
 
