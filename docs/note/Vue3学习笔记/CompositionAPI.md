@@ -17,9 +17,9 @@ Options API的弊端：数据、方法、计算属性等是分散在data、metho
 
 Composition API的优势：用函数的方式更优雅地组织代码，让相关功能的代码更有序地组织在一起。
 
-![img](./images/15216f4ba87c4be6bf0584fbbea06700tplv-k3u1fbpfcp-jj-mark3024000q75.webp)
+![img](./images/15216f4ba87c4be6bf0584fbbea06700tplv-k3u1fbpfcp-jj-mark3024000q75.png)
 
-![img](./images/114bfa1388ff4fbc84350740ccc3af78tplv-k3u1fbpfcp-jj-mark3024000q75.webp)
+![img](./images/114bfa1388ff4fbc84350740ccc3af78tplv-k3u1fbpfcp-jj-mark3024000q75.png)
 
 ## 常用Composition API
 
