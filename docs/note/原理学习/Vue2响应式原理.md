@@ -71,7 +71,7 @@ tags:       # 标签
 >
 > ​    由于 Object.defineProperty 无法监听对象的变化，所以 Vue2 中设置了一个 Observer 类来管理对象的响应式依赖，同时也会递归侦测对象中子数据的变化。
 >
-> ![img](./images/V2responsivenessPrinciple-7.png)
+> ![](./images/V2responsivenessPrinciple-7.png)
 ### Dep
 
 - 相当于一个管家，负责添加或删除相关的依赖和通知相关的依赖进行相关操作。
@@ -93,10 +93,6 @@ tags:       # 标签
 - Watcher通过`new`关键字实例化的时候让`Dep.target`指向自己
 
 > 只有 Watcher 触发的 getter才会进行依赖收集，哪个Watcher触发了getter，就把哪个 Watcher收集到Dep中。当响应式数据发生改变的时候，就会把收集到的 Watcher 都进行通知。（当Dep进行派发更新时，它会通知之前记录的所有watcher：我变了）
->
-> 
->
-> 
 >
 > 每一个vue组件实例，都至少对应一个watcher，该watcher中记录了该组件的render函数。
 >

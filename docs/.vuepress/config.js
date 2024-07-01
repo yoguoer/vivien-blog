@@ -56,10 +56,6 @@ module.exports = {
                 text: "React学习笔记",
                 link: "/note/React学习笔记/React基础知识/",
               },
-              {
-                text: "权限控制",
-                link: "/note/学习笔记/权限控制/",
-              },
             ]
           },
           {
@@ -103,7 +99,7 @@ module.exports = {
         text: "实践总结",
         items: [
           {
-            text: "系统权限控制插件",
+            text: "系统权限控制",
             link: "/project/权限控制/系统权限控制插件/",
           }
         ]
@@ -358,17 +354,6 @@ module.exports = {
           ]
         },
         {
-          title: "学习笔记",
-          collapsable: true,
-          sidebarDepth: 2, // 缩放子级别名称
-          children: [
-            {
-              title: "权限控制",
-              path: "/note/学习笔记/权限控制",
-            },
-          ]
-        },
-        {
           title: "原理学习",
           collapsable: true,
           sidebarDepth: 2, // 缩放子级别名称
@@ -394,6 +379,10 @@ module.exports = {
           collapsable: true,
           sidebarDepth: 2, // 缩放子级别名称
           children: [
+            {
+              title: "权限控制",
+              path: "/project/权限控制/权限控制",
+            },
             {
               title: "系统权限控制插件",
               path: "/project/权限控制/系统权限控制插件",
