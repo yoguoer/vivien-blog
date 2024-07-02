@@ -1,0 +1,20 @@
+diff --git a/node_modules/vuepress-plugin-nuggets-style-copy/copy.vue b/node_modules/vuepress-plugin-nuggets-style-copy/copy.vue
+index 16458b2..6d21ac9 100644
+--- a/node_modules/vuepress-plugin-nuggets-style-copy/copy.vue
++++ b/node_modules/vuepress-plugin-nuggets-style-copy/copy.vue
+@@ -22,11 +22,12 @@ export default {
+           change.call(this, e, this.$el);
+         }
+       };
++
+       if (visibleTip) {
+         this.$message({
+-          time,
+-          content,
+-          title
++          time:time,
++          content:content,
++          title:title
+         });
+       }
+ 

@@ -97,6 +97,7 @@ module.exports = {
       },
       {
         text: "实践总结",
+        icon: "reco-category",
         items: [
           {
             text: "系统权限控制",
@@ -389,10 +390,9 @@ module.exports = {
             },
           ]
         },
-       ]
+      ]
     },
     markdown: {
-      // ......
       extendMarkdown: md => {
         md.use(require("markdown-it-disable-url-encode"));
       }
@@ -417,15 +417,14 @@ module.exports = {
         },
       ],
       [
-        "vuepress-plugin-nuggets-style-copy", // 代码复制弹窗插件，提升复制代码体验。
+        "vuepress-plugin-nuggets-style-copy",
         {
-          copyText: "copy",
+          copyText: "复制代码",
           tip: {
-            content: "复制成功!",
+            content: "复制成功",
           },
         },
-      ],
-      ['vuepress-plugin-code-copy', true],
+      ],    
       // // 评论插件配置（文章底部）
       // [
       //   "@vssue/vuepress-plugin-vssue",
