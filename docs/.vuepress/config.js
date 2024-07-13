@@ -1,3 +1,4 @@
+
 module.exports = {
   // 配置网站的标题和描述，方便 SEO
   title: "Vivien's Notebook",
@@ -96,17 +97,40 @@ module.exports = {
         ],
       },
       {
+        text: "微前端",
+        icon: "reco-blog",
+        items: [
+          {
+            text: "微前端基础知识",
+            link: "/project/MicroFrontends/微前端基础知识",
+          },
+          {
+            text: "微前端解决方案",
+            link: "/project/MicroFrontends/微前端解决方案",
+          }
+        ]
+      },
+      {
         text: "实践总结",
         icon: "reco-category",
         items: [
           {
             text: "系统权限控制",
-            link: "/project/权限控制/系统权限控制插件/",
+            items: [
+              {
+                text: "权限控制基础知识",
+                link: "/project/权限控制/权限控制基础知识/",
+              },
+              {
+                text: "系统权限控制插件",
+                link: "/project/权限控制/系统权限控制插件/",
+              },
+            ]
           }
         ]
       },
       { text: "TimeLine", link: "/timeline/", icon: "reco-date" },
-      { text: "留言板", link: "/messageBoard/messageBoard", icon: "reco-tag" },
+      { text: "留言板", link: "/messageBoard/messageBoard", icon: "reco-message" },
       {
         text: "contact Vivien",
         items: [
@@ -381,8 +405,8 @@ module.exports = {
           sidebarDepth: 2, // 缩放子级别名称
           children: [
             {
-              title: "权限控制",
-              path: "/project/权限控制/权限控制",
+              title: "权限控制基础知识",
+              path: "/project/权限控制/权限控制基础知识",
             },
             {
               title: "系统权限控制插件",
@@ -390,7 +414,22 @@ module.exports = {
             },
           ]
         },
-      ]
+        {
+          title: "微前端",
+          collapsable: true,
+          sidebarDepth: 2, // 缩放子级别名称
+          children: [
+            {
+              title: "微前端基础知识",
+              path: "/project/MicroFrontends/微前端基础知识",
+            },
+            {
+              title: "微前端解决方案",
+              path: "/project/MicroFrontends/微前端解决方案",
+            }
+          ]
+        },
+      ],
     },
     markdown: {
       extendMarkdown: md => {
