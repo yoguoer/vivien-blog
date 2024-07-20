@@ -1,3 +1,297 @@
+const sidebar = {
+  messageBoard: [
+    {
+      title: "messageBoard",
+      path: "/messageBoard/messageBoard",
+    },
+  ],
+  Vue: [
+    {
+      title: "Vue3学习笔记",
+      collapsable: true,
+      sidebarDepth: 2, // 缩放子级别名称
+      children: [
+        {
+          title: "Vue3与Vue2对比",
+          path: "/Vue/Vue3学习笔记/Vue3与Vue2对比",
+        },
+        {
+          title: "创建Vue3项目",
+          path: "/Vue/Vue3学习笔记/创建Vue3项目",
+        },
+        {
+          title: "Composition API",
+          path: "/Vue/Vue3学习笔记/CompositionAPI",
+        },
+        {
+          title: "新的组件",
+          path: "/Vue/Vue3学习笔记/新的组件",
+        },
+        {
+          title: "其它新的 API",
+          path: "/Vue/Vue3学习笔记/其它新的API",
+        },
+      ],
+    },
+  ],
+  books: [
+    {
+      title: "深入浅出webpack",
+      collapsable: true,
+      sidebarDepth: 2, // 缩放子级别名称
+      children: [
+        {
+          title: "为什么要使用webpack",
+          path: "/books/深入浅出webpack/为什么要使用webpack",
+        },
+        {
+          title: "webpack的使用",
+          path: "/books/深入浅出webpack/webpack的使用",
+        },
+        {
+          title: "手动使用webpack",
+          path: "/books/深入浅出webpack/手动使用webpack",
+        },
+        {
+          title: "更深入的一些知识",
+          path: "/books/深入浅出webpack/更深入的一些知识",
+        },
+      ],
+    },
+    {
+      title: "ES6入门教程",
+      collapsable: true, // 是否折叠
+      sidebarDepth: 2, // 缩放子级别名称
+      children: [
+        {
+          title: "ES6与JavaScript",
+          path: "/books/ES6入门教程/ES6与JavaScript",
+        },
+        {
+          title: "let和const命令",
+          path: "/books/ES6入门教程/let和const命令",
+        },
+        {
+          title: "变量的解构赋值",
+          path: "/books/ES6入门教程/变量的解构赋值",
+        },
+        {
+          title: "字符串的扩展",
+          path: "/books/ES6入门教程/字符串的扩展",
+        },
+        {
+          title: "字符串的新增方法",
+          path: "/books/ES6入门教程/字符串的新增方法",
+        },
+        {
+          title: "正则的扩展",
+          path: "/books/ES6入门教程/正则的扩展",
+        },
+        {
+          title: "数值的扩展",
+          path: "/books/ES6入门教程/数值的扩展",
+        },
+        {
+          title: "函数的扩展",
+          path: "/books/ES6入门教程/函数的扩展",
+        },
+        {
+          title: "数组的扩展",
+          path: "/books/ES6入门教程/数组的扩展",
+        },
+        {
+          title: "对象的扩展",
+          path: "/books/ES6入门教程/对象的扩展",
+        },
+        {
+          title: "对象的新增方法",
+          path: "/books/ES6入门教程/对象的新增方法",
+        },
+        {
+          title: "Symbol",
+          path: "/books/ES6入门教程/Symbol",
+        },
+        {
+          title: "Set和Map数据结构",
+          path: "/books/ES6入门教程/Set和Map数据结构",
+        },
+        {
+          title: "Proxy",
+          path: "/books/ES6入门教程/Proxy",
+        },
+        {
+          title: "Promise对象",
+          path: "/books/ES6入门教程/Promise对象",
+        },
+        {
+          title: "Iterator和for...of循环",
+          path: "/books/ES6入门教程/Iterator和for...of循环",
+        },
+        {
+          title: "Generator函数的语法和异步调用",
+          path: "/books/ES6入门教程/Generator函数的语法和异步调用",
+        },
+        {
+          title: "async函数",
+          path: "/books/ES6入门教程/async函数",
+        },
+        {
+          title: "Class的基本语法和继承",
+          path: "/books/ES6入门教程/Class的基本语法和继承",
+        },
+        {
+          title: "Module的语法和加载实现",
+          path: "/books/ES6入门教程/Module的语法和加载实现",
+        },
+        {
+          title: "编程风格",
+          path: "/books/ES6入门教程/编程风格",
+        },
+        {
+          title: "异步遍历器",
+          path: "/books/ES6入门教程/异步遍历器",
+        },
+        {
+          title: "ArrayBuffer",
+          path: "/books/ES6入门教程/ArrayBuffer",
+        },
+        {
+          title: "最新提案",
+          path: "/books/ES6入门教程/最新提案",
+        },
+        {
+          title: "Decorator和Mixin",
+          path: "/books/ES6入门教程/Decorator和Mixin",
+        },
+        {
+          title: "函数式编程",
+          path: "/books/ES6入门教程/函数式编程",
+        },
+      ],
+    },
+    {
+      title: "TypeScript教程",
+      collapsable: true,
+      sidebarDepth: 2, // 缩放子级别名称
+      children: [
+        {
+          title: "简介和基本用法",
+          path: "/books/TypeScript教程/简介和基本用法",
+        },
+        {
+          title: "类型系统",
+          path: "/books/TypeScript教程/类型系统",
+        },
+        {
+          title: "数组和元组",
+          path: "/books/TypeScript教程/数组和元组",
+        },
+        {
+          title: "symbol类型和对象",
+          path: "/books/TypeScript教程/symbol类型和对象",
+        },
+        {
+          title: "函数",
+          path: "/books/TypeScript教程/函数",
+        },
+        {
+          title: "interface和类",
+          path: "/books/TypeScript教程/interface和类",
+        },
+        {
+          title: "泛型和类型断言",
+          path: "/books/TypeScript教程/泛型和类型断言",
+        },
+        {
+          title: "Enum、namespace和模块",
+          path: "/books/TypeScript教程/Enum、namespace和模块",
+        },
+        {
+          title: "装饰器",
+          path: "/books/TypeScript教程/装饰器",
+        },
+        {
+          title: "declare关键字",
+          path: "/books/TypeScript教程/declare关键字",
+        },
+        {
+          title: "类型运算符和类型映射",
+          path: "/books/TypeScript教程/类型运算符和类型映射",
+        },
+        {
+          title: "其它",
+          path: "/books/TypeScript教程/其它",
+        },
+      ],
+    },
+  ],
+  note: [
+    {
+      title: "React学习笔记",
+      collapsable: true,
+      sidebarDepth: 2, // 缩放子级别名称
+      children: [
+        {
+          title: "React基础知识",
+          path: "/note/React学习笔记/React基础知识",
+        }
+      ]
+    },
+    {
+      title: "原理学习",
+      collapsable: true,
+      sidebarDepth: 2, // 缩放子级别名称
+      children: [
+        {
+          title: "Vue2响应式原理",
+          path: "/note/原理学习/Vue2响应式原理",
+        },
+        {
+          title: "VueCLI学习笔记",
+          path: "/note/原理学习/VueCLI学习笔记",
+        },
+        {
+          title: "webpack执行流程",
+          path: "/note/原理学习/webpack执行流程",
+        },
+      ]
+    },
+  ],
+  project: [
+    {
+      title: "实践总结",
+      collapsable: true,
+      sidebarDepth: 2, // 缩放子级别名称
+      children: [
+        {
+          title: "权限控制基础知识",
+          path: "/project/权限控制/权限控制基础知识",
+        },
+        {
+          title: "系统权限控制插件",
+          path: "/project/权限控制/系统权限控制插件",
+        },
+      ]
+    },
+  ],
+  MicroFrontends:[
+    {
+      title: "微前端",
+      collapsable: true,
+      sidebarDepth: 2, // 缩放子级别名称
+      children: [
+        {
+          title: "微前端基础知识",
+          path: "/MicroFrontends/微前端基础知识",
+        },
+        {
+          title: "微前端解决方案",
+          path: "/MicroFrontends/微前端解决方案",
+        }
+      ]
+    },
+  ],
+}
 
 module.exports = {
   // 配置网站的标题和描述，方便 SEO
@@ -43,16 +337,33 @@ module.exports = {
     // 导航栏配置
     nav: [
       {
+        text: "Vue",
+        items: [
+          {
+            text: "Vue3学习笔记",
+            link: "/Vue/Vue3学习笔记/Vue3与Vue2对比/",
+          }
+        ]
+      },
+      {
+        text: "微前端",
+        items: [
+          {
+            text: "微前端基础知识",
+            link: "/MicroFrontends/微前端基础知识",
+          },
+          {
+            text: "微前端解决方案",
+            link: "/MicroFrontends/微前端解决方案",
+          }
+        ]
+      },
+      {
         text: "笔记",
-        icon: "reco-blog",
         items: [
           {
             text: "学习笔记",
             items: [
-              {
-                text: "Vue3学习笔记",
-                link: "/note/Vue3学习笔记/Vue3与Vue2对比/",
-              },
               {
                 text: "React学习笔记",
                 link: "/note/React学习笔记/React基础知识/",
@@ -80,7 +391,6 @@ module.exports = {
       },
       {
         text: "书籍",
-        icon: "reco-document",
         items: [
           {
             text: "深入浅出webpack",
@@ -97,22 +407,7 @@ module.exports = {
         ],
       },
       {
-        text: "微前端",
-        icon: "reco-blog",
-        items: [
-          {
-            text: "微前端基础知识",
-            link: "/project/MicroFrontends/微前端基础知识",
-          },
-          {
-            text: "微前端解决方案",
-            link: "/project/MicroFrontends/微前端解决方案",
-          }
-        ]
-      },
-      {
         text: "实践总结",
-        icon: "reco-category",
         items: [
           {
             text: "系统权限控制",
@@ -130,9 +425,10 @@ module.exports = {
         ]
       },
       { text: "TimeLine", link: "/timeline/", icon: "reco-date" },
-      { text: "留言板", link: "/messageBoard/messageBoard", icon: "reco-message" },
+      // { text: "留言板", link: "/messageBoard/messageBoard", icon: "reco-message" },
       {
         text: "contact Vivien",
+        icon: "reco-category",
         items: [
           { text: "Github", link: "https://github.com/yoguoer" },
           { text: "CSDN", link: "https://blog.csdn.net/Vivien_CC" },
@@ -142,294 +438,12 @@ module.exports = {
 
     // 侧边栏配置
     sidebar: {
-      "/messageBoard/": [
-        {
-          title: "messageBoard",
-          path: "/messageBoard/messageBoard",
-        },
-      ],
-      "/books/": [
-        {
-          title: "深入浅出webpack",
-          collapsable: true,
-          sidebarDepth: 2, // 缩放子级别名称
-          children: [
-            {
-              title: "为什么要使用webpack",
-              path: "/books/深入浅出webpack/为什么要使用webpack",
-            },
-            {
-              title: "webpack的使用",
-              path: "/books/深入浅出webpack/webpack的使用",
-            },
-            {
-              title: "手动使用webpack",
-              path: "/books/深入浅出webpack/手动使用webpack",
-            },
-            {
-              title: "更深入的一些知识",
-              path: "/books/深入浅出webpack/更深入的一些知识",
-            },
-          ],
-        },
-        {
-          title: "ES6入门教程",
-          collapsable: true, // 是否折叠
-          sidebarDepth: 2, // 缩放子级别名称
-          children: [
-            {
-              title: "ES6与JavaScript",
-              path: "/books/ES6入门教程/ES6与JavaScript",
-            },
-            {
-              title: "let和const命令",
-              path: "/books/ES6入门教程/let和const命令",
-            },
-            {
-              title: "变量的解构赋值",
-              path: "/books/ES6入门教程/变量的解构赋值",
-            },
-            {
-              title: "字符串的扩展",
-              path: "/books/ES6入门教程/字符串的扩展",
-            },
-            {
-              title: "字符串的新增方法",
-              path: "/books/ES6入门教程/字符串的新增方法",
-            },
-            {
-              title: "正则的扩展",
-              path: "/books/ES6入门教程/正则的扩展",
-            },
-            {
-              title: "数值的扩展",
-              path: "/books/ES6入门教程/数值的扩展",
-            },
-            {
-              title: "函数的扩展",
-              path: "/books/ES6入门教程/函数的扩展",
-            },
-            {
-              title: "数组的扩展",
-              path: "/books/ES6入门教程/数组的扩展",
-            },
-            {
-              title: "对象的扩展",
-              path: "/books/ES6入门教程/对象的扩展",
-            },
-            {
-              title: "对象的新增方法",
-              path: "/books/ES6入门教程/对象的新增方法",
-            },
-            {
-              title: "Symbol",
-              path: "/books/ES6入门教程/Symbol",
-            },
-            {
-              title: "Set和Map数据结构",
-              path: "/books/ES6入门教程/Set和Map数据结构",
-            },
-            {
-              title: "Proxy",
-              path: "/books/ES6入门教程/Proxy",
-            },
-            {
-              title: "Promise对象",
-              path: "/books/ES6入门教程/Promise对象",
-            },
-            {
-              title: "Iterator和for...of循环",
-              path: "/books/ES6入门教程/Iterator和for...of循环",
-            },
-            {
-              title: "Generator函数的语法和异步调用",
-              path: "/books/ES6入门教程/Generator函数的语法和异步调用",
-            },
-            {
-              title: "async函数",
-              path: "/books/ES6入门教程/async函数",
-            },
-            {
-              title: "Class的基本语法和继承",
-              path: "/books/ES6入门教程/Class的基本语法和继承",
-            },
-            {
-              title: "Module的语法和加载实现",
-              path: "/books/ES6入门教程/Module的语法和加载实现",
-            },
-            {
-              title: "编程风格",
-              path: "/books/ES6入门教程/编程风格",
-            },
-            {
-              title: "异步遍历器",
-              path: "/books/ES6入门教程/异步遍历器",
-            },
-            {
-              title: "ArrayBuffer",
-              path: "/books/ES6入门教程/ArrayBuffer",
-            },
-            {
-              title: "最新提案",
-              path: "/books/ES6入门教程/最新提案",
-            },
-            {
-              title: "Decorator和Mixin",
-              path: "/books/ES6入门教程/Decorator和Mixin",
-            },
-            {
-              title: "函数式编程",
-              path: "/books/ES6入门教程/函数式编程",
-            },
-          ],
-        },
-        {
-          title: "TypeScript教程",
-          collapsable: true,
-          sidebarDepth: 2, // 缩放子级别名称
-          children: [
-            {
-              title: "简介和基本用法",
-              path: "/books/TypeScript教程/简介和基本用法",
-            },
-            {
-              title: "类型系统",
-              path: "/books/TypeScript教程/类型系统",
-            },
-            {
-              title: "数组和元组",
-              path: "/books/TypeScript教程/数组和元组",
-            },
-            {
-              title: "symbol类型和对象",
-              path: "/books/TypeScript教程/symbol类型和对象",
-            },
-            {
-              title: "函数",
-              path: "/books/TypeScript教程/函数",
-            },
-            {
-              title: "interface和类",
-              path: "/books/TypeScript教程/interface和类",
-            },
-            {
-              title: "泛型和类型断言",
-              path: "/books/TypeScript教程/泛型和类型断言",
-            },
-            {
-              title: "Enum、namespace和模块",
-              path: "/books/TypeScript教程/Enum、namespace和模块",
-            },
-            {
-              title: "装饰器",
-              path: "/books/TypeScript教程/装饰器",
-            },
-            {
-              title: "declare关键字",
-              path: "/books/TypeScript教程/declare关键字",
-            },
-            {
-              title: "类型运算符和类型映射",
-              path: "/books/TypeScript教程/类型运算符和类型映射",
-            },
-            {
-              title: "其它",
-              path: "/books/TypeScript教程/其它",
-            },
-          ],
-        },
-      ],
-      "/note/": [
-        {
-          title: "Vue3学习笔记",
-          collapsable: true,
-          sidebarDepth: 2, // 缩放子级别名称
-          children: [
-            {
-              title: "Vue3与Vue2对比",
-              path: "/note/Vue3学习笔记/Vue3与Vue2对比",
-            },
-            {
-              title: "创建Vue3项目",
-              path: "/note/Vue3学习笔记/创建Vue3项目",
-            },
-            {
-              title: "Composition API",
-              path: "/note/Vue3学习笔记/CompositionAPI",
-            },
-            {
-              title: "新的组件",
-              path: "/note/Vue3学习笔记/新的组件",
-            },
-            {
-              title: "其它新的 API",
-              path: "/note/Vue3学习笔记/其它新的API",
-            },
-          ],
-        },
-        {
-          title: "React学习笔记",
-          collapsable: true,
-          sidebarDepth: 2, // 缩放子级别名称
-          children: [
-            {
-              title: "React基础知识",
-              path: "/note/React学习笔记/React基础知识",
-            }
-          ]
-        },
-        {
-          title: "原理学习",
-          collapsable: true,
-          sidebarDepth: 2, // 缩放子级别名称
-          children: [
-            {
-              title: "Vue2响应式原理",
-              path: "/note/原理学习/Vue2响应式原理",
-            },
-            {
-              title: "VueCLI学习笔记",
-              path: "/note/原理学习/VueCLI学习笔记",
-            },
-            {
-              title: "webpack执行流程",
-              path: "/note/原理学习/webpack执行流程",
-            },
-          ]
-        },
-      ],
-      '/project/': [
-        {
-          title: "实践总结",
-          collapsable: true,
-          sidebarDepth: 2, // 缩放子级别名称
-          children: [
-            {
-              title: "权限控制基础知识",
-              path: "/project/权限控制/权限控制基础知识",
-            },
-            {
-              title: "系统权限控制插件",
-              path: "/project/权限控制/系统权限控制插件",
-            },
-          ]
-        },
-        {
-          title: "微前端",
-          collapsable: true,
-          sidebarDepth: 2, // 缩放子级别名称
-          children: [
-            {
-              title: "微前端基础知识",
-              path: "/project/MicroFrontends/微前端基础知识",
-            },
-            {
-              title: "微前端解决方案",
-              path: "/project/MicroFrontends/微前端解决方案",
-            }
-          ]
-        },
-      ],
+      "/messageBoard/": sidebar.messageBoard,
+      "/books/": sidebar.books,
+      "/note/": sidebar.note,
+      '/project/': sidebar.project,
+      '/Vue/': sidebar.Vue,
+      '/MicroFrontends/': sidebar.MicroFrontends
     },
     markdown: {
       extendMarkdown: md => {
@@ -463,7 +477,7 @@ module.exports = {
             content: "复制成功",
           },
         },
-      ],    
+      ],
       // // 评论插件配置（文章底部）
       // [
       //   "@vssue/vuepress-plugin-vssue",

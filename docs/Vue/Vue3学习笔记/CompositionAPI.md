@@ -10,11 +10,11 @@ tags:       # 标签
  - Vue
 ---
 
-- Vue2的API设计是Options(选项式)风格的。Vue3的API设计是Composition(组合式)风格的。
+- Vue2的API设计是`Options`(选项式)风格的。Vue3的API设计是`Composition`(组合式)风格的。
 
-- Options API的弊端：数据、方法、计算属性等是分散在data、methods、computed中的，若要新增或者修改一个需求，就需要分别修改data、methods、computed，滚动条反复上下移动，不便于维护和复用。
+- `Options API`的弊端：数据、方法、计算属性等是分散在`data`、`methods`、`computed`中的，若要新增或者修改一个需求，就需要分别修改`data`、`methods`、`computed`，滚动条反复上下移动，不便于维护和复用。
 
-- Composition API的优势：用函数的方式更优雅地组织代码，让相关功能的代码更有序地组织在一起。
+- `Composition API`的优势：用函数的方式更优雅地组织代码，让相关功能的代码更有序地组织在一起。
 
 
 ![img](./images/15216f4ba87c4be6bf0584fbbea06700tplv-k3u1fbpfcp-jj-mark3024000q75.png)
@@ -799,16 +799,23 @@ emit
   - 它用于接收父组件中未指定插槽名称的内容。
   - 适用于子组件中只有一个内容区域需要被父组件替换的情况。
   - 示例：在子组件中使用`<slot></slot>`定义默认插槽，父组件中直接放在子组件标签内的内容将传递给这个插槽。
+  
 - **具名插槽**：允许我们在子组件中定义多个插槽，并通过名称来区分它们。
   - 在子组件中，通过给`<slot>`元素添加name属性来定义具名插槽。
   - 适用于子组件中有多个内容区域需要被父组件替换，且这些区域在组件中的位置不固定的情况。
   - 在父组件中，通过`v-slot:插槽名称`或`#插槽名称`的语法来指定要插入哪个具名插槽的内容。
   - 示例：在子组件中定义`<slot name="header"></slot>`和`<slot name="footer"></slot>`，父组件中使用`<template v-slot:header>...</template>`和`<template v-slot:footer>...</template>`来插入内容。
+  
 - **作用域插槽**：是一种特殊类型的插槽，它允许子组件向父组件传递数据，并在父组件的插槽模板中使用这些数据。
   - 在子组件中，通过给`<slot>`元素添加`v-bind（或简写为:）`来绑定要传递给父组件的数据。
   - 适用于子组件需要向父组件传递数据，并在父组件的插槽模板中使用这些数据的情况。
   - 在父组件中，通过`v-slot:插槽名称="slotProps"`的语法来接收这些数据，其中slotProps是一个对象，包含了子组件传递的所有数据。
-  - 示例：子组件中`<slot :user="user"></slot>`，父组件中`<template v-slot:default="slotProps">{{ slotProps.user.name }}</template>`。
+  
+  ```
+  示例：
+  子组件中 `<slot :user1="user1"></slot>` ，
+  父组件中 `<template v-slot:default="slotProps">{{ slotProps.user1.name }}</template>` 。
+  ```
 
 ​	原理：
 - 模板编译
