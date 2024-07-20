@@ -1,14 +1,8 @@
 const sidebar = {
-  messageBoard: [
-    {
-      title: "messageBoard",
-      path: "/messageBoard/messageBoard",
-    },
-  ],
   Vue: [
     {
       title: "Vue3学习笔记",
-      collapsable: true,
+      collapsable: false,
       sidebarDepth: 2, // 缩放子级别名称
       children: [
         {
@@ -33,11 +27,43 @@ const sidebar = {
         },
       ],
     },
+    {
+      title: "笔记",
+      collapsable: false,
+      sidebarDepth: 2, // 缩放子级别名称
+      children: [
+        {
+          title: "Vue2响应式原理",
+          path: "/Vue/原理学习/Vue2响应式原理",
+        },
+        {
+          title: "VueCLI",
+          path: "/Vue/原理学习/VueCLI",
+        },
+      ]
+    }
+  ],
+  MicroFrontends: [
+    {
+      title: "微前端",
+      collapsable: false,
+      sidebarDepth: 2, // 缩放子级别名称
+      children: [
+        {
+          title: "微前端基础知识",
+          path: "/MicroFrontends/微前端基础知识",
+        },
+        {
+          title: "微前端解决方案",
+          path: "/MicroFrontends/微前端解决方案",
+        }
+      ]
+    },
   ],
   books: [
     {
       title: "深入浅出webpack",
-      collapsable: true,
+      collapsable: false,
       sidebarDepth: 2, // 缩放子级别名称
       children: [
         {
@@ -60,7 +86,7 @@ const sidebar = {
     },
     {
       title: "ES6入门教程",
-      collapsable: true, // 是否折叠
+      collapsable: false, // 是否折叠
       sidebarDepth: 2, // 缩放子级别名称
       children: [
         {
@@ -171,7 +197,7 @@ const sidebar = {
     },
     {
       title: "TypeScript教程",
-      collapsable: true,
+      collapsable: false,
       sidebarDepth: 2, // 缩放子级别名称
       children: [
         {
@@ -225,42 +251,10 @@ const sidebar = {
       ],
     },
   ],
-  note: [
-    {
-      title: "React学习笔记",
-      collapsable: true,
-      sidebarDepth: 2, // 缩放子级别名称
-      children: [
-        {
-          title: "React基础知识",
-          path: "/note/React学习笔记/React基础知识",
-        }
-      ]
-    },
-    {
-      title: "原理学习",
-      collapsable: true,
-      sidebarDepth: 2, // 缩放子级别名称
-      children: [
-        {
-          title: "Vue2响应式原理",
-          path: "/note/原理学习/Vue2响应式原理",
-        },
-        {
-          title: "VueCLI学习笔记",
-          path: "/note/原理学习/VueCLI学习笔记",
-        },
-        {
-          title: "webpack执行流程",
-          path: "/note/原理学习/webpack执行流程",
-        },
-      ]
-    },
-  ],
   project: [
     {
-      title: "实践总结",
-      collapsable: true,
+      title: "权限控制",
+      collapsable: false,
       sidebarDepth: 2, // 缩放子级别名称
       children: [
         {
@@ -274,23 +268,18 @@ const sidebar = {
       ]
     },
   ],
-  MicroFrontends:[
+  devops: [
     {
-      title: "微前端",
-      collapsable: true,
-      sidebarDepth: 2, // 缩放子级别名称
-      children: [
-        {
-          title: "微前端基础知识",
-          path: "/MicroFrontends/微前端基础知识",
-        },
-        {
-          title: "微前端解决方案",
-          path: "/MicroFrontends/微前端解决方案",
-        }
-      ]
+      title: "webpack执行流程",
+      path: "/devops/webpack/webpack执行流程",
     },
   ],
+  React: [
+    {
+      title: "React",
+      path: "/React/React基础知识",
+    },
+  ]
 }
 
 module.exports = {
@@ -338,12 +327,7 @@ module.exports = {
     nav: [
       {
         text: "Vue",
-        items: [
-          {
-            text: "Vue3学习笔记",
-            link: "/Vue/Vue3学习笔记/Vue3与Vue2对比/",
-          }
-        ]
+        link: "/Vue/Vue3学习笔记/Vue3与Vue2对比/",
       },
       {
         text: "微前端",
@@ -357,37 +341,6 @@ module.exports = {
             link: "/MicroFrontends/微前端解决方案",
           }
         ]
-      },
-      {
-        text: "笔记",
-        items: [
-          {
-            text: "学习笔记",
-            items: [
-              {
-                text: "React学习笔记",
-                link: "/note/React学习笔记/React基础知识/",
-              },
-            ]
-          },
-          {
-            text: "原理学习",
-            items: [
-              {
-                text: "Vue2响应式原理",
-                link: "/note/原理学习/Vue2响应式原理/",
-              },
-              {
-                text: "VueCLI学习笔记",
-                link: "/note/原理学习/VueCLI学习笔记/",
-              },
-              {
-                text: "webpack执行流程",
-                link: "/note/原理学习/webpack执行流程/",
-              },
-            ]
-          },
-        ],
       },
       {
         text: "书籍",
@@ -407,25 +360,24 @@ module.exports = {
         ],
       },
       {
-        text: "实践总结",
+        text: "前端工程化",
+        link: "/devops/webpack/webpack执行流程/",
+      },
+      {
+        text: "项目实践",
         items: [
           {
-            text: "系统权限控制",
-            items: [
-              {
-                text: "权限控制基础知识",
-                link: "/project/权限控制/权限控制基础知识/",
-              },
-              {
-                text: "系统权限控制插件",
-                link: "/project/权限控制/系统权限控制插件/",
-              },
-            ]
-          }
+            text: "权限控制",
+            link: "/project/权限控制/权限控制基础知识/",
+          },
         ]
       },
+      {
+        text: "React",
+        link: "/React/React基础知识/"
+      },
       { text: "TimeLine", link: "/timeline/", icon: "reco-date" },
-      // { text: "留言板", link: "/messageBoard/messageBoard", icon: "reco-message" },
+      { text: "留言板", link: "/messageBoard/messageBoard", icon: "reco-message" },
       {
         text: "contact Vivien",
         icon: "reco-category",
@@ -438,12 +390,12 @@ module.exports = {
 
     // 侧边栏配置
     sidebar: {
-      "/messageBoard/": sidebar.messageBoard,
       "/books/": sidebar.books,
-      "/note/": sidebar.note,
       '/project/': sidebar.project,
       '/Vue/': sidebar.Vue,
-      '/MicroFrontends/': sidebar.MicroFrontends
+      '/MicroFrontends/': sidebar.MicroFrontends,
+      '/React/': sidebar.React,
+      '/devops/': sidebar.devops
     },
     markdown: {
       extendMarkdown: md => {
