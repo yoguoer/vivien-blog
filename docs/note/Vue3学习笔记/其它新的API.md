@@ -14,6 +14,11 @@ tags:       # 标签
 
 ### Vue 2.x 有许多全局 API 和配置
 
+- createApp()
+- nextTick()
+- defineAsyncComponent()
+- defineProperty()
+
 ```javascript
 //注册全局组件
 Vue.component('MyButton', {
