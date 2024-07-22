@@ -23,8 +23,6 @@
     "vuepress-theme-reco": "^1.6.17"
   },
   "dependencies": {
-    "@vssue/api-github-v3": "^1.4.7",
-    "@vssue/vuepress-plugin-vssue": "^1.4.8",
     "markdown-it-disable-url-encode": "^1.0.1",
     "package-lock.json": "^1.0.0"
   }
