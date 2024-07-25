@@ -44,6 +44,10 @@ module.exports = [
                 text: "权限控制",
                 link: "/project/权限控制/权限控制基础知识/",
             },
+            {
+                text: "项目搭建",
+                link: "/project/项目搭建/搭建一个组件库/",
+            },
         ]
     },
     {

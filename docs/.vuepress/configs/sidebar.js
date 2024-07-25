@@ -107,6 +107,15 @@ module.exports = {
             children: [
                 "/project/权限控制/权限控制基础知识",
                 "/project/权限控制/系统权限控制插件",
+                
+            ]
+        },
+        {
+            title: "项目搭建",
+            collapsable: false,
+            sidebarDepth: 2, // 缩放子级别名称
+            children: [
+                "/project/项目搭建/搭建一个组件库",
             ]
         },
     ],
