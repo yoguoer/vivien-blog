@@ -47,7 +47,7 @@ module.exports = {
         md.use(require("markdown-it-disable-url-encode"));
       },
       toc: {
-        includeLevel:[1, 2, 3, 4] // includeLevel 默认值为[2, 3], 所以默认不显示一级标题
+        includeLevel: [1, 2, 3, 4] // includeLevel 默认值为[2, 3], 所以默认不显示一级标题
       }
     },
     // 插件
@@ -70,14 +70,15 @@ module.exports = {
           },
         },
       ],
+      ['vuepress-plugin-code-copy', true],
       [
-        "vuepress-plugin-nuggets-style-copy",
-        {
-          copyText: "复制代码",
-          tip: {
-            content: "复制成功",
-          },
+      "vuepress-plugin-nuggets-style-copy",
+      {
+        copyText: "复制代码",
+        tip: {
+          content: "复制成功",
         },
+      },
       ],
     ],
   },
