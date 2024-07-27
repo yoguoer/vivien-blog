@@ -3,7 +3,6 @@ module.exports = {
         {
             title: "Vue3学习笔记",
             collapsable: false,
-            sidebarDepth: 2, // 缩放子级别名称
             children: [
                 "/Vue/Vue3学习笔记/Vue3与Vue2对比",
                 "/Vue/Vue3学习笔记/创建Vue3项目",
@@ -15,7 +14,6 @@ module.exports = {
         {
             title: "笔记",
             collapsable: false,
-            sidebarDepth: 2, // 缩放子级别名称
             children: [
                 "/Vue/原理学习/Vue2响应式原理",
                 "/Vue/原理学习/VueCLI",
@@ -26,7 +24,6 @@ module.exports = {
         {
             title: "微前端",
             collapsable: false,
-            sidebarDepth: 2, // 缩放子级别名称
             children: [
                 "/MicroFrontends/微前端基础知识",
                 "/MicroFrontends/微前端解决方案",
@@ -37,7 +34,6 @@ module.exports = {
         {
             title: "深入浅出webpack",
             collapsable: true,
-            sidebarDepth: 2, // 缩放子级别名称
             children: [
                 "/books/深入浅出webpack/为什么要使用webpack",
                 "/books/深入浅出webpack/webpack的使用",
@@ -49,7 +45,6 @@ module.exports = {
         {
             title: "ES6入门教程",
             collapsable: true, // 是否折叠
-            sidebarDepth: 2, // 缩放子级别名称
             children: [
                 "/books/ES6入门教程/ES6与JavaScript",
                 "/books/ES6入门教程/let和const命令",
@@ -82,7 +77,6 @@ module.exports = {
         {
             title: "TypeScript教程",
             collapsable: true,
-            sidebarDepth: 2, // 缩放子级别名称
             children: [
                 "/books/TypeScript教程/简介和基本用法",
                 "/books/TypeScript教程/类型系统",
@@ -103,7 +97,6 @@ module.exports = {
         {
             title: "权限控制",
             collapsable: false,
-            sidebarDepth: 2, // 缩放子级别名称
             children: [
                 "/project/权限控制/权限控制基础知识",
                 "/project/权限控制/系统权限控制插件",
@@ -113,7 +106,6 @@ module.exports = {
         {
             title: "项目搭建",
             collapsable: false,
-            sidebarDepth: 2, // 缩放子级别名称
             children: [
                 "/project/项目搭建/搭建一个组件库",
             ]
@@ -123,9 +115,15 @@ module.exports = {
         {
             title: "webpack",
             collapsable: false,
-            sidebarDepth: 2, // 缩放子级别名称
             children: [
                 "/devops/webpack/webpack执行流程",
+            ]
+        },
+        {
+            title: "架构&方案",
+            collapsable: false,
+            children: [
+                "/devops/渲染架构/前端渲染模式",
             ]
         },
     ],
@@ -133,7 +131,6 @@ module.exports = {
         {
             title: "React",
             collapsable: false,
-            sidebarDepth: 2, // 缩放子级别名称
             children: [
                 "/React/React基础知识",
             ]
