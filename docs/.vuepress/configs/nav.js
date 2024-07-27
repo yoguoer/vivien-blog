@@ -1,5 +1,9 @@
 module.exports = [
     {
+        text: "前端基础",
+        link: "/base/browser/浏览器渲染/",
+    },
+    {
         text: "Vue",
         link: "/Vue/Vue3学习笔记/Vue3与Vue2对比/",
     },
@@ -13,6 +17,10 @@ module.exports = [
             {
                 text: "微前端解决方案",
                 link: "/MicroFrontends/微前端解决方案",
+            },
+            {
+                text: "使用microApp重构旧项目",
+                link: "/MicroFrontends/使用MicroApp重构旧项目",
             }
         ]
     },

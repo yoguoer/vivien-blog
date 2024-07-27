@@ -72,7 +72,7 @@ tags:       # 标签
 
 ​        将CLI的逻辑和生成代码的逻辑解耦，通过不同的插件去修改文件内容和配置，生成最终的代码。CLI插件是向Vue项目提供可选功能的npm包，可以集成Babel/TypeScript转译、ESLint、单元测试等功能。
 
-​        当用户在项目内部运行vue-cli-service命令时，它会自动解析并加载package.json中列出的所有CLI插件。通过插件系统，开发者可以定制自己的项目配置，以满足特定的需求。
+​        当用户在项目内部运行`vue-cli-service`命令时，它会自动解析并加载package.json中列出的所有CLI插件。通过插件系统，开发者可以定制自己的项目配置，以满足特定的需求。
 
 > ​        在源码中，Generator类负责生成最终的项目代码。它使用一个插件管理器来加载和管理插件。当用户选择特定的插件时，插件管理器会解析并加载相应的插件。插件可以修改生成代码的内容和配置，例如添加特定的文件、修改文件内容等。根据预设配置和插件修改的内容生成最终的项目代码。
 
@@ -286,7 +286,7 @@ creator.on('creation', onCreationEvent); 著作权归「玩相机的程序员-ax
 
 ​        先判断 vue create 命令是否带有-p选项，如果有的话会调用resolvePreset去解析preset。
 
-​        resolvePreset 函数会先获取 ～/.vuerc 中保存的preset， 然后进行遍历，如果里面包含了-p中的 <presetName>，则返回～/.vuerc中的preset。如果没有则判断是否是采用内联的JSON字符串预设选项，如果是就会解析.json文件，并返回preset，还有一种情况就是从远程获取preset(利用download-git-repo下载远程的preset.json)并返回。
+​        resolvePreset 函数会先获取 ～/.vuerc 中保存的preset， 然后进行遍历，如果里面包含了-p中的 `<presetName>`，则返回～/.vuerc中的preset。如果没有则判断是否是采用内联的JSON字符串预设选项，如果是就会解析.json文件，并返回preset，还有一种情况就是从远程获取preset(利用download-git-repo下载远程的preset.json)并返回。
 
 ### savePreset 保存预设
 
@@ -294,7 +294,7 @@ creator.on('creation', onCreationEvent); 著作权归「玩相机的程序员-ax
 
 ​       promptAndResolvePreset()：在Vue CLI的最后，会让用户选择save this as a preset for future?，如果用户选择了Yes，就会执行相关逻辑将这次的交互结果保存下来。这部分的逻辑也是在promptAndResolvePreset中。
 
-​       this.resolveFinalPrompts()：就是将在Creator的构造函数里初始化的那些prompts合到一起了。 
+​       `this.resolveFinalPrompts()`：就是将在Creator的构造函数里初始化的那些prompts合到一起了。 
 
 ![image](./images/VueCLILearning-23.png)
 
@@ -321,13 +321,13 @@ creator.on('creation', onCreationEvent); 著作权归「玩相机的程序员-ax
 
 ![image](./images/VueCLILearning-25.png)
 
-> Creator.create()方法主要执行项目的参数初始化、包管理初始化、npm初始化、仓库初始化，通过Generator生成项目文件并安装项目依赖。
+> `Creator.create()`方法主要执行项目的参数初始化、包管理初始化、npm初始化、仓库初始化，通过Generator生成项目文件并安装项目依赖。
 
 ## Generator类
 
 ​         Generator是vue create最核心的部分，这个类负责代码生成。
 
-​        生成项目文件(解析插件对象并创建生成器实例生成项目文件)：在安装完依赖以后，就会调用resolvePlugins，作用就是加载每个插件的generator，并且如果插件需要进行命令行交互的话会执行inquirer.prompt获取option。 在此之后会实例化一个Generator。
+​        生成项目文件(解析插件对象并创建生成器实例生成项目文件)：在安装完依赖以后，就会调用resolvePlugins，作用就是加载每个插件的generator，并且如果插件需要进行命令行交互的话会执行`inquirer.prompt`获取option。 在此之后会实例化一个Generator。
 
 ![image](./images/VueCLILearning-26.png)
 
@@ -366,14 +366,14 @@ creator.on('creation', onCreationEvent); 著作权归「玩相机的程序员-ax
 
 ​       下面看一下GeneratorAPI提供了哪些方法。
 
-- hasPlugin：判断项目中是否有某个插件
-- extendPackage：拓展 package.json 配置
-- render：利用 ejs 渲染模板文件
-- onCreateComplete：内存中保存的文件字符串全部被写入文件后的回调函数
-- exitLog：当 generator 退出的时候输出的信息
-- genJSConfig：将 json 文件生成为 js 配置文件
-- injectImports：向文件当中注入import语法的方法
-- injectRootOptions：向 Vue 根实例中添加选项
+- `hasPlugin`：判断项目中是否有某个插件
+- `extendPackage`：拓展 package.json 配置
+- `render`：利用 ejs 渲染模板文件
+- `onCreateComplete`：内存中保存的文件字符串全部被写入文件后的回调函数
+- `exitLog`：当 generator 退出的时候输出的信息
+- `genJSConfig`：将 json 文件生成为 js 配置文件
+- `injectImports`：向文件当中注入import语法的方法
+- `injectRootOptions`：向 Vue 根实例中添加选项
 - ...
 
 ​        对于vue-cli 3.0内置的插件，比如：@vue/cli-plugin-eslint、@vue/cli-plugin-pwa等等，以及其他第三方插件，他们的generator作用都是一样的，都可以向项目的package.json中注入额外的依赖或字段，并向项目中添加文件。
@@ -399,12 +399,12 @@ creator.on('creation', onCreationEvent); 著作权归「玩相机的程序员-ax
 ​        resolveFiles主要分为以下三个部分执行：
 
 - fileMiddlewares：包含了ejs render函数，所有插件调用api.render时只是把对应的渲染函数push到了fileMiddlewares中，等所有的插件执行完以后才会遍历执行fileMiddlewares里面的所有函数，即在内存中生成模板文件字符串。
-- injectImportsAndOptions：就是将generator注入的import和rootOption解析到对应的文件中，比如选择vuex，会在src/main.js中添加import store from './store'，在vue根实例中添加router选项。
+- injectImportsAndOptions：就是将generator注入的import和rootOption解析到对应的文件中，比如选择vuex，会在src/main.js中添加`import store from './store'`，在vue根实例中添加router选项。
 - postProcessFilesCbs：是在所有普通文件在内存中渲染成字符串完成之后要执行的遍历回调。例如将@vue/cli-service/generator/index.js中的render放在了fileMiddlewares里面，而将@vue/cli-service/generator/router/index.js中将替换src/App.vue文件的方法放在了postProcessFiles里面，原因是对src/App.vue文件的一些替换一定是发生在render函数之后，如果在之前，修改后的src/App.vue在之后render函数执行时又会被覆盖，这样显然不合理。
 
 ### writeFileTree
 
-​      执行了generate的所有逻辑后，内存中已经有了需要输出的各种文件，放在this.files里。generate的最后一步就是调用writeFileTree将内存中的所有文件写入到硬盘。
+​      执行了generate的所有逻辑后，内存中已经有了需要输出的各种文件，放在this.files里。generate的最后一步就是调用`writeFileTree`将内存中的所有文件写入到硬盘。
 
 ​      提取了配置文件和模板渲染后调用sortPkg对package.json的字段进行了排序并将package.json转化为json字符串添加到项目的files中。 此时整个项目的文件已经在内存中生成好了(在源码中就是对应的this.files)，接下来就调用writeFileTree方法将内存中的字符串模板文件生成在磁盘中。
 
@@ -467,8 +467,8 @@ module.exports = async function getVersions () {
 ​       判断是否初始化Git仓库，并初始化Git仓库环境：这段代码会先调用 shouldInitGit 来判断是否需要 git 初始化。判断的情形有以下几种：
 
 - 没有安装 git (!hasGit())：false；
-- vue create 含有 --git 或者 -g 选项：true；
-- vue create 含有 --no-git 或者 -n 选项：false；
+- `vue create` 含有 --git 或者 -g 选项：true；
+- `vue create` 含有 --no-git 或者 -n 选项：false；
 - 生成项目的目录是否已经含有 git （!hasProjectGit(this.context)）：如果有，则返回 false，否则返回 true。
 
 在判断完是否需要git初始化项目后，接下来就会调用installDeps安装依赖，看下installDeps的源码：
@@ -615,7 +615,7 @@ if (config && config !== 'base') {
 
 ### git 初始化提交
 
-​       暂存 git，拉取远程preset：git初始化提交主要就是调用shouldInitGit来判断是否需要git初始化提交，如果需要初始化提交就会执行git add和git commmit命令，只有在以下情况会git初始化提交：
+​       暂存 git，拉取远程preset：git初始化提交主要就是调用shouldInitGit来判断是否需要git初始化提交，如果需要初始化提交就会执行`git add`和`git commmit`命令，只有在以下情况会git初始化提交：
 
 - --git: vue create 含有 -g 或者 --git 选项
 
@@ -635,11 +635,11 @@ if (config && config !== 'base') {
   - 解析执行命令——serve
   - 运行服务——service.run('serve')
 
-​        vue-cli-service命令执行前，先创建了一个Service类，并通过service.run()方法执行执行命令。
+​        `vue-cli-service`命令执行前，先创建了一个Service类，并通过`service.run()`方法执行执行命令。
 
 ## @vue/cli-service
 
-​        该插件是Vue CLI的核心插件，和create react app的react-scripts类似，借助这个插件，能够更深刻地理解GeneratorAPI和Vue CLI的插件架构是如何实现的。来看一下@vue/cli-service这个包下的generator/index.js文件，将源码拆解成多段，其实也就是分别调用了GeneratorAPI实例的不同方法。
+​        该插件是Vue CLI的核心插件，和`create react app`的react-scripts类似，借助这个插件，能够更深刻地理解GeneratorAPI和Vue CLI的插件架构是如何实现的。来看一下@vue/cli-service这个包下的generator/index.js文件，将源码拆解成多段，其实也就是分别调用了GeneratorAPI实例的不同方法。
 
 ### 渲染 template
 
@@ -659,7 +659,7 @@ if (config && config !== 'base') {
 
 ## 使用命令
 
-​        在一个Vue CLI项目中，@vue/cli-service安装了一个名为vue-cli-service的命令。可以在npm scripts中以vue-cli-service，或从终端中以./node_modules/.bin/vue-cli-service访问这个命令。
+​        在一个Vue CLI项目中，@vue/cli-service安装了一个名为vue-cli-service的命令。可以在`npm scripts`中以`vue-cli-service`，或从终端中以`./node_modules/.bin/vue-cli-service`访问这个命令。
 
 ​        这是使用默认preset的项目的package.json。可以通过npm或Yarn调用这些script。
 

@@ -1,4 +1,13 @@
 module.exports = {
+    '/base/': [
+        {
+            title: "浏览器",
+            collapsable: false,
+            children: [
+                "/base/browser/浏览器渲染",
+            ],
+        },
+    ],
     '/Vue/': [
         {
             title: "Vue3学习笔记",
@@ -27,6 +36,7 @@ module.exports = {
             children: [
                 "/MicroFrontends/微前端基础知识",
                 "/MicroFrontends/微前端解决方案",
+                "/MicroFrontends/使用MicroApp重构旧项目",
             ]
         },
     ],
@@ -60,6 +70,7 @@ module.exports = {
                 "/books/ES6入门教程/Symbol",
                 "/books/ES6入门教程/Set和Map数据结构",
                 "/books/ES6入门教程/Proxy",
+                "/books/ES6入门教程/Reflect",
                 "/books/ES6入门教程/Promise对象",
                 "/books/ES6入门教程/Iterator和for...of循环",
                 "/books/ES6入门教程/Generator函数的语法和异步调用",
