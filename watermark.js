@@ -4,7 +4,7 @@ function addWatermark() {
     // 水印元素的样式
     const style = `
         position: fixed;
-        font-size: 32px;
+        font-size: 20px;
         color: rgba(0, 0, 0, 0.1);
         transform: rotate(-30deg);
         pointer-events: none;
